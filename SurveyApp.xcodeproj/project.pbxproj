@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518931E3840DA0073CE61 /* AppDelegate.swift */; };
+		5B4518961E3840DA0073CE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518951E3840DA0073CE61 /* ViewController.swift */; };
+		5B4518991E3840DA0073CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4518971E3840DA0073CE61 /* Main.storyboard */; };
+		5B45189B1E3840DA0073CE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B45189A1E3840DA0073CE61 /* Assets.xcassets */; };
+		5B45189E1E3840DA0073CE61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */; };
+		5B4518A91E3840DB0073CE61 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */; };
+		A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B4518A51E3840DB0073CE61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B4518881E3840DA0073CE61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B45188F1E3840DA0073CE61;
+			remoteInfo = SurveyApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5B4518901E3840DA0073CE61 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B4518931E3840DA0073CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B4518951E3840DA0073CE61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B4518981E3840DA0073CE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B45189A1E3840DA0073CE61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B45189D1E3840DA0073CE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B45189F1E3840DA0073CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
+		5B4518AA1E3840DB0073CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
+		E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B45188D1E3840DA0073CE61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B4518A11E3840DB0073CE61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EBB2F355D3112815042B3AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */,
+				79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53BB3E30386D1259D2E9153A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B4518871E3840DA0073CE61 = {
+			isa = PBXGroup;
+			children = (
+				5B4518921E3840DA0073CE61 /* SurveyApp */,
+				5B4518A71E3840DB0073CE61 /* SurveyAppTests */,
+				5B4518911E3840DA0073CE61 /* Products */,
+				0EBB2F355D3112815042B3AC /* Pods */,
+				53BB3E30386D1259D2E9153A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5B4518911E3840DA0073CE61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B4518901E3840DA0073CE61 /* SurveyApp.app */,
+				5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B4518921E3840DA0073CE61 /* SurveyApp */ = {
+			isa = PBXGroup;
+			children = (
+				5B4518931E3840DA0073CE61 /* AppDelegate.swift */,
+				5B4518951E3840DA0073CE61 /* ViewController.swift */,
+				5B4518971E3840DA0073CE61 /* Main.storyboard */,
+				5B45189A1E3840DA0073CE61 /* Assets.xcassets */,
+				5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */,
+				5B45189F1E3840DA0073CE61 /* Info.plist */,
+			);
+			path = SurveyApp;
+			sourceTree = "<group>";
+		};
+		5B4518A71E3840DB0073CE61 /* SurveyAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */,
+				5B4518AA1E3840DB0073CE61 /* Info.plist */,
+			);
+			path = SurveyAppTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B45188F1E3840DA0073CE61 /* SurveyApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B4518AD1E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyApp" */;
+			buildPhases = (
+				54C0BED96BBBB17ADCCF6838 /* [CP] Check Pods Manifest.lock */,
+				5B45188C1E3840DA0073CE61 /* Sources */,
+				5B45188D1E3840DA0073CE61 /* Frameworks */,
+				5B45188E1E3840DA0073CE61 /* Resources */,
+				F9D1708D465BC7369DDF2251 /* [CP] Embed Pods Frameworks */,
+				71671342EAE2E09C59646391 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SurveyApp;
+			productName = SurveyApp;
+			productReference = 5B4518901E3840DA0073CE61 /* SurveyApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B4518A31E3840DB0073CE61 /* SurveyAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B4518B01E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */;
+			buildPhases = (
+				5B4518A01E3840DB0073CE61 /* Sources */,
+				5B4518A11E3840DB0073CE61 /* Frameworks */,
+				5B4518A21E3840DB0073CE61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B4518A61E3840DB0073CE61 /* PBXTargetDependency */,
+			);
+			name = SurveyAppTests;
+			productName = SurveyAppTests;
+			productReference = 5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B4518881E3840DA0073CE61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "aleksey chernish";
+				TargetAttributes = {
+					5B45188F1E3840DA0073CE61 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					5B4518A31E3840DB0073CE61 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5B45188F1E3840DA0073CE61;
+					};
+				};
+			};
+			buildConfigurationList = 5B45188B1E3840DA0073CE61 /* Build configuration list for PBXProject "SurveyApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B4518871E3840DA0073CE61;
+			productRefGroup = 5B4518911E3840DA0073CE61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B45188F1E3840DA0073CE61 /* SurveyApp */,
+				5B4518A31E3840DB0073CE61 /* SurveyAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B45188E1E3840DA0073CE61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B45189E1E3840DA0073CE61 /* LaunchScreen.storyboard in Resources */,
+				5B45189B1E3840DA0073CE61 /* Assets.xcassets in Resources */,
+				5B4518991E3840DA0073CE61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B4518A21E3840DB0073CE61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54C0BED96BBBB17ADCCF6838 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71671342EAE2E09C59646391 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9D1708D465BC7369DDF2251 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B45188C1E3840DA0073CE61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B4518961E3840DA0073CE61 /* ViewController.swift in Sources */,
+				5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B4518A01E3840DB0073CE61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B4518A91E3840DB0073CE61 /* SurveyAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B4518A61E3840DB0073CE61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B45188F1E3840DA0073CE61 /* SurveyApp */;
+			targetProxy = 5B4518A51E3840DB0073CE61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B4518971E3840DA0073CE61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B4518981E3840DA0073CE61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B45189D1E3840DA0073CE61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B4518AB1E3840DB0073CE61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B4518AC1E3840DB0073CE61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B4518AE1E3840DB0073CE61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SurveyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5B4518AF1E3840DB0073CE61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SurveyApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		5B4518B11E3840DB0073CE61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SurveyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
+			};
+			name = Debug;
+		};
+		5B4518B21E3840DB0073CE61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SurveyAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B45188B1E3840DA0073CE61 /* Build configuration list for PBXProject "SurveyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B4518AB1E3840DB0073CE61 /* Debug */,
+				5B4518AC1E3840DB0073CE61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B4518AD1E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B4518AE1E3840DB0073CE61 /* Debug */,
+				5B4518AF1E3840DB0073CE61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5B4518B01E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B4518B11E3840DB0073CE61 /* Debug */,
+				5B4518B21E3840DB0073CE61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B4518881E3840DA0073CE61 /* Project object */;
+}
