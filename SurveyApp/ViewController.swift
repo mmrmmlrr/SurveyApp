@@ -13,9 +13,9 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    NetworkClient.shared.getSurveys().subscribeNext {
-      print($0)
-    }
+    NetworkClient.shared.getSurveys().subscribeNext { response in
+      print(response)
+    }.ownedBy(self)
   }
 
 }

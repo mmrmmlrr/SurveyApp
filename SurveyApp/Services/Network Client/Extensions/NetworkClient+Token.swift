@@ -10,21 +10,19 @@ import Alamofire
 
 extension NetworkClient {
   
-  func refreshToken() -> Pipe<String?> {
+  func refreshToken() -> Pipe<NetworkResponse<String>> {
     var params = [String: AnyObject]()
     params["grant_type"] = "password" as AnyObject?
     params["username"] = "carlos@nimbl3.com" as AnyObject?
     params["password"] = "antikera" as AnyObject?
     
-    let pipe: Pipe<String?> = NetworkClient.shared.executeRequest(
+    return NetworkClient.shared.executeRequest(
       path: "oauth/token",
       method: HTTPMethod.post,
       parameters: params,
       signed: false,
       serializer: TokenSerializer()
     )
-    
-    return pipe
   }
   
 }

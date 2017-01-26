@@ -10,19 +10,17 @@ import Alamofire
 
 extension NetworkClient {
   
-  func getSurveys() -> Pipe<[String: AnyObject]?> {
+  func getSurveys() -> Pipe<NetworkResponse<[String: AnyObject]>> {
     
     var params = [String: AnyObject]()
     params["page"] = 1 as AnyObject
-    params["per_page"] = 10 as AnyObject
+    params["per_page"] = 2 as AnyObject
     
-    let pipe = NetworkClient.shared.executeRequest(
+    return NetworkClient.shared.executeRequest(
       path: "surveys.json",
-      method: HTTPMethod.post,
+      method: HTTPMethod.get,
       parameters: params,
       serializer: SurveysSerializer()
     )
-    
-    return pipe
   }
 }
