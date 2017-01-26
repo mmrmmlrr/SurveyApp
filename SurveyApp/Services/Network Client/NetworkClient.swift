@@ -61,8 +61,7 @@ class NetworkClient {
                 signal.sendNext($0)
               }.autodispose()
             }
-            }.autodispose()
-          print(status)
+          }.autodispose()
         }
         signal.sendNext(response as? T)
     }

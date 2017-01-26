@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5B28645E1E39C1EA000F6232 /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28645D1E39C1EA000F6232 /* Serializer.swift */; };
 		5B2864611E39C24A000F6232 /* TokenSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864601E39C24A000F6232 /* TokenSerializer.swift */; };
+		5B2864631E39D2F2000F6232 /* SurveysSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864621E39D2F2000F6232 /* SurveysSerializer.swift */; };
+		5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */; };
 		5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518931E3840DA0073CE61 /* AppDelegate.swift */; };
 		5B4518961E3840DA0073CE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518951E3840DA0073CE61 /* ViewController.swift */; };
 		5B4518991E3840DA0073CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4518971E3840DA0073CE61 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5B28645D1E39C1EA000F6232 /* Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Serializer.swift; sourceTree = "<group>"; };
 		5B2864601E39C24A000F6232 /* TokenSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenSerializer.swift; sourceTree = "<group>"; };
+		5B2864621E39D2F2000F6232 /* SurveysSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveysSerializer.swift; sourceTree = "<group>"; };
+		5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Surveys.swift"; sourceTree = "<group>"; };
 		5B4518901E3840DA0073CE61 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4518931E3840DA0073CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4518951E3840DA0073CE61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				5B2864601E39C24A000F6232 /* TokenSerializer.swift */,
+				5B2864621E39D2F2000F6232 /* SurveysSerializer.swift */,
 			);
 			path = "Entity Serializers";
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				5BB81A5A1E3994420032DA3A /* NetworkClient+Token.swift */,
+				5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				5B5A6B9F1E3870690052F253 /* ControlProxy.m in Sources */,
 				5B5A6B9D1E3870690052F253 /* Signal.swift in Sources */,
 				5BB81A5B1E3994420032DA3A /* NetworkClient+Token.swift in Sources */,
+				5B2864631E39D2F2000F6232 /* SurveysSerializer.swift in Sources */,
 				5B5A6B981E3870690052F253 /* Signal+Conversion.swift in Sources */,
 				5B5A6BA51E3870690052F253 /* UIStepper+Signal.swift in Sources */,
 				5B5A6B9A1E3870690052F253 /* Signal+KVO.swift in Sources */,
@@ -464,6 +471,7 @@
 				5B5A6B921E3870690052F253 /* NSObject+Pool.swift in Sources */,
 				5B28645E1E39C1EA000F6232 /* Serializer.swift in Sources */,
 				5B5A6BA81E3870690052F253 /* USegmentedControl+Signal.swift in Sources */,
+				5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */,
 				5B5A6B931E3870690052F253 /* Observable.swift in Sources */,
 				5B5A6BA71E3870690052F253 /* UITextField+Signal.swift in Sources */,
 				5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */,
