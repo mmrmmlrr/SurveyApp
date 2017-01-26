@@ -8,9 +8,22 @@
 
 import Alamofire
 
+private class Retrier: RequestRetrier {
+  
+   func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
+    print("I RETRY")
+  }
+}
+
 class NetworkClient {
   
+  private let retrier = Retrier()
+  
   static let shared = NetworkClient()
+  
+  init() {
+    SessionManager.default.retrier = retrier
+  }
   
   private let credentialsProvider: APICredentialsProviding = CredentialsStore()
   
@@ -20,7 +33,6 @@ class NetworkClient {
     
     return headers
   }
-
   
   func executeRequest<T>(path: String,
                       method: HTTPMethod,
@@ -28,13 +40,23 @@ class NetworkClient {
                       encoding: ParameterEncoding) -> Pipe<T?> {
     let signal = Pipe<T?>()
     
+    
+    
     let req = Alamofire.request(
       credentialsProvider.basePath + path,
       method: method,
       parameters: parameters,
       encoding: encoding,
-      headers: headers()).responseString { response in
+      headers: headers()).responseJSON { [weak self]response in
         print(response)
+        if let value = response.value as? [String: Any],
+          let status = value["status"] as? Int {
+          print("STATUS")
+          self?.refreshToken().subscribeNext { tokenResponse in
+            print(tokenResponse)
+          }.autodispose()
+          print(status)
+        }
         signal.sendNext(response as? T)
     }
     
