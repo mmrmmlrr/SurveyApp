@@ -20,7 +20,8 @@ extension NetworkClient {
       path: "oauth/token",
       method: HTTPMethod.post,
       parameters: params,
-      encoding: JSONEncoding.default
+      signed: false,
+      serializer: TokenSerializer()
     )
     
     return pipe

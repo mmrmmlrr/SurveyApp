@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     
-    var params = ["access_token" : "d9584af77d8c0d6622e2b3c554ed520b2ae64ba0721e52daa12d6eaa5e5cdd93" as AnyObject]
+    var params = [String: AnyObject]()
     params["page"] = 1 as AnyObject
     params["per_page"] = 10 as AnyObject
 
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
       path: "surveys.json",
       method: HTTPMethod.post,
       parameters: params,
-      encoding: JSONEncoding.default
+      serializer: TokenSerializer()
       )
     
     pipe.subscribeNext { print($0) }

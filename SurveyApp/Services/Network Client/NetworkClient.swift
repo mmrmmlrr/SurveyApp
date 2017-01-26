@@ -8,22 +8,9 @@
 
 import Alamofire
 
-private class Retrier: RequestRetrier {
-  
-   func should(_ manager: SessionManager, retry request: Request, with error: Error, completion: @escaping RequestRetryCompletion) {
-    print("I RETRY")
-  }
-}
-
 class NetworkClient {
   
-  private let retrier = Retrier()
-  
   static let shared = NetworkClient()
-  
-  init() {
-    SessionManager.default.retrier = retrier
-  }
   
   private let credentialsProvider: APICredentialsProviding = CredentialsStore()
   
@@ -36,34 +23,54 @@ class NetworkClient {
   
   func executeRequest<T>(path: String,
                       method: HTTPMethod,
-                      parameters: [String: AnyObject]? = nil,
-                      encoding: ParameterEncoding) -> Pipe<T?> {
+                      parameters: [String: AnyObject] = [:],
+                      signed: Bool = true,
+                      serializer: Serializer<T>) -> Pipe<T?> {
     let signal = Pipe<T?>()
     
-    
+    var resultingParams = parameters
+    if signed {
+      resultingParams["access_token"] = credentialsProvider.accessToken as AnyObject?
+    }
+    print(credentialsProvider.accessToken)
     
     let req = Alamofire.request(
       credentialsProvider.basePath + path,
       method: method,
-      parameters: parameters,
-      encoding: encoding,
+      parameters: resultingParams,
+      encoding: JSONEncoding.default,
       headers: headers()).responseJSON { [weak self]response in
-        print(response)
+        switch response.result {
+        case .success(let value):
+          if let representation = value as? [String: AnyObject],
+            let object = serializer.serializeRepresentation(representation){
+            signal.sendNext(object)
+          } else {
+            //TODO: throw serialization error
+          }
+        case .failure(let error):
+          print(error)
+          //TODO: throw error
+        }
         if let value = response.value as? [String: Any],
-          let status = value["status"] as? Int {
-          print("STATUS")
+          let status = value["status"] as? Int, status == 404 {
           self?.refreshToken().subscribeNext { tokenResponse in
-            print(tokenResponse)
-          }.autodispose()
+            if let token = tokenResponse {
+              self?.credentialsProvider.assignNewToken(token)
+              self?.executeRequest(path: path, method: method, parameters: parameters, signed: true, serializer: serializer).subscribeNext {
+                signal.sendNext($0)
+              }.autodispose()
+            }
+            }.autodispose()
           print(status)
         }
         signal.sendNext(response as? T)
     }
     
     signal.destructor = { req.cancel() }
-
+    
     return signal
   }
-
+  
 }
 
