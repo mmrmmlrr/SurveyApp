@@ -26,12 +26,12 @@ class NetworkClient {
     return headers
   }()
   
-  func executeRequest<T>(path: String,
+  func executeRequest<ResponseObjectType, SerializerType: Serializer>(path: String,
                       method: HTTPMethod,
                       parameters: [String: AnyObject] = [:],
                       signed: Bool = true,
-                      serializer: Serializer<T>) -> Pipe<NetworkResponse<T>> {
-    let signal = Pipe<NetworkResponse<T>>()
+                      serializer: SerializerType) -> Pipe<NetworkResponse<ResponseObjectType>> {
+    let signal = Pipe<NetworkResponse<ResponseObjectType>>()
     
     var resultingParams = parameters
     if signed {
@@ -45,14 +45,16 @@ class NetworkClient {
       parameters: resultingParams,
       encoding: JSONEncoding.prettyPrinted,
       headers: headers).validate(contentType: ["application/json"]).responseJSON { [weak self] response in
-        print(response)
         switch response.result {
         case .success(let value):
           if let representation = value as? [String: AnyObject],
-            let object = serializer.serializeRepresentation(representation){
+            let objectSerializer = serializer as? EntitySerializer<ResponseObjectType>,
+            let object = objectSerializer.serializeRepresentation(representation){
             signal.sendNext(.success(object))
-          } else {
-//            signal.sendNext(.error(TODO: throw serialization error))
+          } else if let representation = value as? [[String: AnyObject]],
+            let collectionSerializer = serializer as? CollectionSerializer<SerializerType.ObjectType>,
+            let objects = collectionSerializer.serializeRepresentation(representation) as? ResponseObjectType {
+            signal.sendNext(.success(objects))
           }
         case .failure(let error):
           signal.sendNext(.failure(error))

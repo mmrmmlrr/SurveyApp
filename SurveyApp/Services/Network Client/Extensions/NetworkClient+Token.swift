@@ -18,7 +18,7 @@ extension NetworkClient {
     
     return NetworkClient.shared.executeRequest(
       path: "oauth/token",
-      method: HTTPMethod.post,
+      method: .post,
       parameters: params,
       signed: false,
       serializer: TokenSerializer()

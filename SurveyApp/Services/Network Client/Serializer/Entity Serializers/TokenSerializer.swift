@@ -8,10 +8,14 @@
 
 import Foundation
 
-class TokenSerializer: Serializer<String> {
+class TokenSerializer: EntitySerializer<String> {
   
-  override func serializeRepresentation(_ representation: [String : AnyObject]) -> String? {
-    return representation["access_token"] as? String
+  override func serializeRepresentation(_ representation: Any) -> String? {
+    if let dictionary = representation as? [String: AnyObject] {
+      return dictionary["access_token"] as? String
+    }
+    
+    return nil
   }
   
 }

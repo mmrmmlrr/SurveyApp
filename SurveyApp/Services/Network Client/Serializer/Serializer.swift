@@ -8,10 +8,8 @@
 
 import Foundation
 
-class Serializer<T> {
+protocol Serializer {
   
-  func serializeRepresentation(_ representation: [String: AnyObject]) -> T? {
-    fatalError() //Implemented by descendants
-  }
+  associatedtype ObjectType
   
 }
