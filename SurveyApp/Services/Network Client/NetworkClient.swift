@@ -59,7 +59,7 @@ class NetworkClient {
           signal.sendNext(.failure(error))
         }
         if let value = response.value as? [String: Any],
-          let status = value["status"] as? Int, status == 404 {
+          let status = value["status"] as? Int, status == 500 {
           self?.refreshToken().subscribeNext { tokenResponse in
             if case .success(let token) = tokenResponse {
               self?.credentialsProvider.assignNewToken(token)

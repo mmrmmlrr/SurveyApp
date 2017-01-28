@@ -12,5 +12,17 @@ class Survey {
   
   var hotelName: String = ""
   var description: String = ""
+  var imageURLString: String = ""
+  var uid = "123"
   
+  var hashValue: Int {
+    return uid.hashValue
+  }
+  
+}
+
+extension Survey: Hashable, Equatable { }
+
+func ==(lhs: Survey, rhs: Survey) -> Bool {
+  return lhs.hashValue == rhs.hashValue
 }
