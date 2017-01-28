@@ -19,6 +19,16 @@ class SurveysListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    title = "SURVEYS" //TODO: Localize 
+    let button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 44.0, height: 44.0))
+    button.setImage(UIImage(named: "refresh_icon"), for: .normal)
+    button.selectionSignal.subscribeNext { [weak self] in
+      self?.model.fetchSurveys()
+      self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+    }.ownedBy(self)
+    let refreshButtonItem = UIBarButtonItem(customView: button)
+    navigationItem.leftBarButtonItem = refreshButtonItem
+    
     adapter = CollectionViewAdapter(dataSource: model.surveysDataAdapter, collectionView: collectionView)
     adapter.registerCellClass(SurveyCell.self)
     adapter.nibNameForObjectMatching = { _ in return String(describing: SurveyCell.self) }
@@ -42,11 +52,17 @@ class SurveysListViewController: UIViewController {
     model.fetchSurveys()
   }
   
-  @IBAction private func takeSurvey(sender: AnyObject?) {
+  @IBAction
+  private func takeSurvey(sender: AnyObject?) {
     let detailsModel = model.createDetailsModelForHighlightedItem()
     let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: SurveyDetailsViewController.self)) as! SurveyDetailsViewController
     controller.model = detailsModel
     navigationController?.pushViewController(controller, animated: true)
+  }
+  
+  @objc
+  private func refresh(sender: AnyObject?) {
+    model.fetchSurveys()
   }
   
 }
