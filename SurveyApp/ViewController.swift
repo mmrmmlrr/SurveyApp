@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     
     NetworkClient.shared.getSurveys().subscribeNext { response in
-      print(response)
     }.ownedBy(self)
   }
 
