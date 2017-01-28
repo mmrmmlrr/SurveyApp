@@ -12,6 +12,7 @@ class Survey {
   
   var hotelName: String = ""
   var description: String = ""
+  var imageURLString: String = ""
   var uid = "123"
   
   var hashValue: Int {

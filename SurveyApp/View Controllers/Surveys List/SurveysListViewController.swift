@@ -21,6 +21,9 @@ class SurveysListViewController: UIViewController {
     adapter = CollectionViewAdapter(dataSource: model.surveysDataAdapter, collectionView: collectionView)
     adapter.registerCellClass(SurveyCell.self)
     adapter.nibNameForObjectMatching = { _ in return String(describing: SurveyCell.self) }
+    adapter.userInfoForCellSizeMatching = { [weak self] _ in
+      return ["size": NSValue(cgSize: self!.collectionView.frame.size)]
+    }
     
     model.fetchSurveys()
   }
