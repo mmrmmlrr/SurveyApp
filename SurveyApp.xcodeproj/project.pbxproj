@@ -62,6 +62,9 @@
 		5BDD26F91E3C3B6B0061AC6B /* Array+RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD26F81E3C3B6B0061AC6B /* Array+RemoveDuplicates.swift */; };
 		5BDD26FC1E3C3E3C0061AC6B /* SurveyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD26FB1E3C3E3C0061AC6B /* SurveyCell.swift */; };
 		5BDD26FE1E3C41040061AC6B /* SurveyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BDD26FD1E3C41040061AC6B /* SurveyCell.xib */; };
+		5BDD27011E3C8EE00061AC6B /* SurveyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27001E3C8EE00061AC6B /* SurveyDetailsModel.swift */; };
+		5BDD27031E3C8EEA0061AC6B /* SurveyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27021E3C8EEA0061AC6B /* SurveyDetailsViewController.swift */; };
+		5BDD27061E3C914E0061AC6B /* SurveysNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27051E3C914E0061AC6B /* SurveysNavigationController.swift */; };
 		A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +141,9 @@
 		5BDD26F81E3C3B6B0061AC6B /* Array+RemoveDuplicates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveDuplicates.swift"; sourceTree = "<group>"; };
 		5BDD26FB1E3C3E3C0061AC6B /* SurveyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyCell.swift; sourceTree = "<group>"; };
 		5BDD26FD1E3C41040061AC6B /* SurveyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SurveyCell.xib; sourceTree = "<group>"; };
+		5BDD27001E3C8EE00061AC6B /* SurveyDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailsModel.swift; sourceTree = "<group>"; };
+		5BDD27021E3C8EEA0061AC6B /* SurveyDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailsViewController.swift; sourceTree = "<group>"; };
+		5BDD27051E3C914E0061AC6B /* SurveysNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveysNavigationController.swift; sourceTree = "<group>"; };
 		79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -209,6 +215,8 @@
 		5B2864831E3C32FD000F6232 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5BDD27041E3C91420061AC6B /* Navigation Controller */,
+				5BDD26FF1E3C8ED30061AC6B /* Survey Details */,
 				5B2864841E3C330B000F6232 /* Surveys List */,
 			);
 			path = "View Controllers";
@@ -381,6 +389,23 @@
 				5BDD26FD1E3C41040061AC6B /* SurveyCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5BDD26FF1E3C8ED30061AC6B /* Survey Details */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD27001E3C8EE00061AC6B /* SurveyDetailsModel.swift */,
+				5BDD27021E3C8EEA0061AC6B /* SurveyDetailsViewController.swift */,
+			);
+			path = "Survey Details";
+			sourceTree = "<group>";
+		};
+		5BDD27041E3C91420061AC6B /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD27051E3C914E0061AC6B /* SurveysNavigationController.swift */,
+			);
+			path = "Navigation Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -563,8 +588,11 @@
 				5B28647F1E3C2E66000F6232 /* Deserializer.swift in Sources */,
 				5B5A6B921E3870690052F253 /* NSObject+Pool.swift in Sources */,
 				5B5A6BA81E3870690052F253 /* USegmentedControl+Signal.swift in Sources */,
+				5BDD27031E3C8EEA0061AC6B /* SurveyDetailsViewController.swift in Sources */,
 				5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */,
+				5BDD27011E3C8EE00061AC6B /* SurveyDetailsModel.swift in Sources */,
 				5B5A6B931E3870690052F253 /* Observable.swift in Sources */,
+				5BDD27061E3C914E0061AC6B /* SurveysNavigationController.swift in Sources */,
 				5BDD26F71E3C3B520061AC6B /* Set+ObjectEqualTo.swift in Sources */,
 				5B5A6BA71E3870690052F253 /* UITextField+Signal.swift in Sources */,
 				5B28646E1E3B0129000F6232 /* Survey.swift in Sources */,
