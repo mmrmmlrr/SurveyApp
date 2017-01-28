@@ -1,5 +1,5 @@
 //
-//  EntitySerializer.swift
+//  EntityDeserializer.swift
 //  SurveyApp
 //
 //  Created by Aleksey on 27.01.17.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-class EntitySerializer<T>: Serializer {
+class EntityDeserializer<T>: Deserializer {
   typealias ObjectType = T
   
-  func serializeRepresentation(_ representation: Any) -> T? {
+  func deserializeRepresentation(_ representation: Any) -> T? {
     return representation as? T
   }
   

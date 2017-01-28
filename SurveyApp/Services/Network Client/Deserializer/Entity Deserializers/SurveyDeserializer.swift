@@ -1,5 +1,5 @@
 //
-//  SurveySerializer.swift
+//  SurveyDeserializer.swift
 //  SurveyApp
 //
 //  Created by Aleksey on 27.01.17.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-class SurveySerializer: EntitySerializer<Survey> {
+class SurveyDeserializer: EntityDeserializer<Survey> {
   
-  override func serializeRepresentation(_ representation: Any) -> Survey? {
+  override func deserializeRepresentation(_ representation: Any) -> Survey? {
     return Survey()
   }
   

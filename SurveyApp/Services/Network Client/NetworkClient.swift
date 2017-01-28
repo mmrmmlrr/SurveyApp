@@ -26,18 +26,17 @@ class NetworkClient {
     return headers
   }()
   
-  func executeRequest<ResponseObjectType, SerializerType: Serializer>(path: String,
+  func executeRequest<ResponseObjectType, DeserializerType: Deserializer>(path: String,
                       method: HTTPMethod,
                       parameters: [String: AnyObject] = [:],
                       signed: Bool = true,
-                      serializer: SerializerType) -> Pipe<NetworkResponse<ResponseObjectType>> {
+                      serializer: DeserializerType) -> Pipe<NetworkResponse<ResponseObjectType>> {
     let signal = Pipe<NetworkResponse<ResponseObjectType>>()
     
     var resultingParams = parameters
     if signed {
       resultingParams["access_token"] = credentialsProvider.accessToken as AnyObject?
     }
-    print(resultingParams)
     
     let req = Alamofire.request(
       credentialsProvider.basePath + path,
@@ -48,12 +47,12 @@ class NetworkClient {
         switch response.result {
         case .success(let value):
           if let representation = value as? [String: AnyObject],
-            let objectSerializer = serializer as? EntitySerializer<ResponseObjectType>,
-            let object = objectSerializer.serializeRepresentation(representation){
+            let objectDeserializer = serializer as? EntityDeserializer<ResponseObjectType>,
+            let object = objectDeserializer.deserializeRepresentation(representation){
             signal.sendNext(.success(object))
           } else if let representation = value as? [[String: AnyObject]],
-            let collectionSerializer = serializer as? CollectionSerializer<SerializerType.ObjectType>,
-            let objects = collectionSerializer.serializeRepresentation(representation) as? ResponseObjectType {
+            let collectionDeserializer = serializer as? CollectionDeserializer<DeserializerType.ObjectType>,
+            let objects = collectionDeserializer.deserializeRepresentation(representation) as? ResponseObjectType {
             signal.sendNext(.success(objects))
           }
         case .failure(let error):

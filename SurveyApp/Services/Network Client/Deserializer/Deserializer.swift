@@ -1,5 +1,5 @@
 //
-//  Serializer.swift
+//  Deserializer.swift
 //  SurveyApp
 //
 //  Created by Aleksey on 26.01.17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Serializer {
+protocol Deserializer {
   
   associatedtype ObjectType
   

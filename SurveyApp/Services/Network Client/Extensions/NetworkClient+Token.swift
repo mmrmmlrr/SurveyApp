@@ -21,7 +21,7 @@ extension NetworkClient {
       method: .post,
       parameters: params,
       signed: false,
-      serializer: TokenSerializer()
+      serializer: TokenDeserializer()
     )
   }
   
