@@ -7,12 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */; };
+		5B28646E1E3B0129000F6232 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28646D1E3B0129000F6232 /* Survey.swift */; };
+		5B28647E1E3C2E66000F6232 /* CollectionDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */; };
+		5B28647F1E3C2E66000F6232 /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864791E3C2E66000F6232 /* Deserializer.swift */; };
+		5B2864801E3C2E66000F6232 /* SurveyDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28647B1E3C2E66000F6232 /* SurveyDeserializer.swift */; };
+		5B2864811E3C2E66000F6232 /* TokenDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28647C1E3C2E66000F6232 /* TokenDeserializer.swift */; };
+		5B2864821E3C2E66000F6232 /* EntityDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28647D1E3C2E66000F6232 /* EntityDeserializer.swift */; };
 		5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518931E3840DA0073CE61 /* AppDelegate.swift */; };
 		5B4518961E3840DA0073CE61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518951E3840DA0073CE61 /* ViewController.swift */; };
 		5B4518991E3840DA0073CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4518971E3840DA0073CE61 /* Main.storyboard */; };
 		5B45189B1E3840DA0073CE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B45189A1E3840DA0073CE61 /* Assets.xcassets */; };
 		5B45189E1E3840DA0073CE61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */; };
 		5B4518A91E3840DB0073CE61 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */; };
+		5B5A6B6D1E386F520052F253 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B6C1E386F520052F253 /* NetworkClient.swift */; };
+		5B5A6B8E1E3870690052F253 /* AutodisposePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B701E3870690052F253 /* AutodisposePool.swift */; };
+		5B5A6B8F1E3870690052F253 /* DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B711E3870690052F253 /* DeinitObservable.swift */; };
+		5B5A6B901E3870690052F253 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B721E3870690052F253 /* Disposable.swift */; };
+		5B5A6B911E3870690052F253 /* NSObject+DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B731E3870690052F253 /* NSObject+DeinitObservable.swift */; };
+		5B5A6B921E3870690052F253 /* NSObject+Pool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B741E3870690052F253 /* NSObject+Pool.swift */; };
+		5B5A6B931E3870690052F253 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B751E3870690052F253 /* Observable.swift */; };
+		5B5A6B941E3870690052F253 /* Pipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B761E3870690052F253 /* Pipe.swift */; };
+		5B5A6B951E3870690052F253 /* Signal+Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B771E3870690052F253 /* Signal+Binding.swift */; };
+		5B5A6B961E3870690052F253 /* Signal+BooleanType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B781E3870690052F253 /* Signal+BooleanType.swift */; };
+		5B5A6B971E3870690052F253 /* Signal+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B791E3870690052F253 /* Signal+Comparable.swift */; };
+		5B5A6B981E3870690052F253 /* Signal+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B7A1E3870690052F253 /* Signal+Conversion.swift */; };
+		5B5A6B991E3870690052F253 /* Signal+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B7B1E3870690052F253 /* Signal+Equatable.swift */; };
+		5B5A6B9A1E3870690052F253 /* Signal+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B7C1E3870690052F253 /* Signal+KVO.swift */; };
+		5B5A6B9B1E3870690052F253 /* Signal+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B7D1E3870690052F253 /* Signal+Operations.swift */; };
+		5B5A6B9C1E3870690052F253 /* Signal+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B7E1E3870690052F253 /* Signal+Void.swift */; };
+		5B5A6B9D1E3870690052F253 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B7F1E3870690052F253 /* Signal.swift */; };
+		5B5A6B9E1E3870690052F253 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B801E3870690052F253 /* Subscription.swift */; };
+		5B5A6B9F1E3870690052F253 /* ControlProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B831E3870690052F253 /* ControlProxy.m */; };
+		5B5A6BA01E3870690052F253 /* UIButton+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B841E3870690052F253 /* UIButton+Signal.swift */; };
+		5B5A6BA11E3870690052F253 /* UIControl+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B851E3870690052F253 /* UIControl+Signal.swift */; };
+		5B5A6BA21E3870690052F253 /* UIDatePicker+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B861E3870690052F253 /* UIDatePicker+Signal.swift */; };
+		5B5A6BA41E3870690052F253 /* UISlider+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B881E3870690052F253 /* UISlider+Signal.swift */; };
+		5B5A6BA51E3870690052F253 /* UIStepper+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B891E3870690052F253 /* UIStepper+Signal.swift */; };
+		5B5A6BA61E3870690052F253 /* UISwitch+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8A1E3870690052F253 /* UISwitch+Signal.swift */; };
+		5B5A6BA71E3870690052F253 /* UITextField+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8B1E3870690052F253 /* UITextField+Signal.swift */; };
+		5B5A6BA81E3870690052F253 /* USegmentedControl+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8C1E3870690052F253 /* USegmentedControl+Signal.swift */; };
+		5B5A6BA91E3870690052F253 /* UIView+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8D1E3870690052F253 /* UIView+Signal.swift */; };
+		5BB81A581E398A050032DA3A /* CredentialsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB81A571E398A050032DA3A /* CredentialsStore.swift */; };
+		5BB81A5B1E3994420032DA3A /* NetworkClient+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB81A5A1E3994420032DA3A /* NetworkClient+Token.swift */; };
 		A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +65,13 @@
 
 /* Begin PBXFileReference section */
 		0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Surveys.swift"; sourceTree = "<group>"; };
+		5B28646D1E3B0129000F6232 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
+		5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDeserializer.swift; sourceTree = "<group>"; };
+		5B2864791E3C2E66000F6232 /* Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
+		5B28647B1E3C2E66000F6232 /* SurveyDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDeserializer.swift; sourceTree = "<group>"; };
+		5B28647C1E3C2E66000F6232 /* TokenDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenDeserializer.swift; sourceTree = "<group>"; };
+		5B28647D1E3C2E66000F6232 /* EntityDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityDeserializer.swift; sourceTree = "<group>"; };
 		5B4518901E3840DA0073CE61 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4518931E3840DA0073CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B4518951E3840DA0073CE61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +82,38 @@
 		5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
 		5B4518AA1E3840DB0073CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B5A6B6C1E386F520052F253 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		5B5A6B701E3870690052F253 /* AutodisposePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutodisposePool.swift; sourceTree = "<group>"; };
+		5B5A6B711E3870690052F253 /* DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeinitObservable.swift; sourceTree = "<group>"; };
+		5B5A6B721E3870690052F253 /* Disposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
+		5B5A6B731E3870690052F253 /* NSObject+DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+DeinitObservable.swift"; sourceTree = "<group>"; };
+		5B5A6B741E3870690052F253 /* NSObject+Pool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Pool.swift"; sourceTree = "<group>"; };
+		5B5A6B751E3870690052F253 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		5B5A6B761E3870690052F253 /* Pipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipe.swift; sourceTree = "<group>"; };
+		5B5A6B771E3870690052F253 /* Signal+Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+Binding.swift"; sourceTree = "<group>"; };
+		5B5A6B781E3870690052F253 /* Signal+BooleanType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+BooleanType.swift"; sourceTree = "<group>"; };
+		5B5A6B791E3870690052F253 /* Signal+Comparable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+Comparable.swift"; sourceTree = "<group>"; };
+		5B5A6B7A1E3870690052F253 /* Signal+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+Conversion.swift"; sourceTree = "<group>"; };
+		5B5A6B7B1E3870690052F253 /* Signal+Equatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+Equatable.swift"; sourceTree = "<group>"; };
+		5B5A6B7C1E3870690052F253 /* Signal+KVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+KVO.swift"; sourceTree = "<group>"; };
+		5B5A6B7D1E3870690052F253 /* Signal+Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+Operations.swift"; sourceTree = "<group>"; };
+		5B5A6B7E1E3870690052F253 /* Signal+Void.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Signal+Void.swift"; sourceTree = "<group>"; };
+		5B5A6B7F1E3870690052F253 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		5B5A6B801E3870690052F253 /* Subscription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		5B5A6B821E3870690052F253 /* ControlProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlProxy.h; sourceTree = "<group>"; };
+		5B5A6B831E3870690052F253 /* ControlProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControlProxy.m; sourceTree = "<group>"; };
+		5B5A6B841E3870690052F253 /* UIButton+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B851E3870690052F253 /* UIControl+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B861E3870690052F253 /* UIDatePicker+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B881E3870690052F253 /* UISlider+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B891E3870690052F253 /* UIStepper+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStepper+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B8A1E3870690052F253 /* UISwitch+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISwitch+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B8B1E3870690052F253 /* UITextField+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B8C1E3870690052F253 /* USegmentedControl+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "USegmentedControl+Signal.swift"; sourceTree = "<group>"; };
+		5B5A6B8D1E3870690052F253 /* UIView+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Signal.swift"; sourceTree = "<group>"; };
+		5BB81A571E398A050032DA3A /* CredentialsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
+		5BB81A5A1E3994420032DA3A /* NetworkClient+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Token.swift"; sourceTree = "<group>"; };
+		5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyAppBridgingHeader.h; sourceTree = SOURCE_ROOT; };
 		79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +154,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5B28646C1E3B0120000F6232 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5B28646D1E3B0129000F6232 /* Survey.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5B2864771E3C2E66000F6232 /* Deserializer */ = {
+			isa = PBXGroup;
+			children = (
+				5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */,
+				5B2864791E3C2E66000F6232 /* Deserializer.swift */,
+				5B28647A1E3C2E66000F6232 /* Entity Deserializers */,
+				5B28647D1E3C2E66000F6232 /* EntityDeserializer.swift */,
+			);
+			path = Deserializer;
+			sourceTree = "<group>";
+		};
+		5B28647A1E3C2E66000F6232 /* Entity Deserializers */ = {
+			isa = PBXGroup;
+			children = (
+				5B28647B1E3C2E66000F6232 /* SurveyDeserializer.swift */,
+				5B28647C1E3C2E66000F6232 /* TokenDeserializer.swift */,
+			);
+			path = "Entity Deserializers";
+			sourceTree = "<group>";
+		};
 		5B4518871E3840DA0073CE61 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +205,15 @@
 		5B4518921E3840DA0073CE61 /* SurveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				5B28646C1E3B0120000F6232 /* Entities */,
+				5B5A6B6E1E3870690052F253 /* Vendors */,
+				5B5A6B6A1E386F4A0052F253 /* Services */,
 				5B4518931E3840DA0073CE61 /* AppDelegate.swift */,
 				5B4518951E3840DA0073CE61 /* ViewController.swift */,
 				5B4518971E3840DA0073CE61 /* Main.storyboard */,
 				5B45189A1E3840DA0073CE61 /* Assets.xcassets */,
 				5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */,
+				5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */,
 				5B45189F1E3840DA0073CE61 /* Info.plist */,
 			);
 			path = SurveyApp;
@@ -118,6 +226,93 @@
 				5B4518AA1E3840DB0073CE61 /* Info.plist */,
 			);
 			path = SurveyAppTests;
+			sourceTree = "<group>";
+		};
+		5B5A6B6A1E386F4A0052F253 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5BB81A561E3989F90032DA3A /* Credentials Store */,
+				5B5A6B6B1E386F4A0052F253 /* Network Client */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5B5A6B6B1E386F4A0052F253 /* Network Client */ = {
+			isa = PBXGroup;
+			children = (
+				5B2864771E3C2E66000F6232 /* Deserializer */,
+				5BB81A591E3994330032DA3A /* Extensions */,
+				5B5A6B6C1E386F520052F253 /* NetworkClient.swift */,
+			);
+			path = "Network Client";
+			sourceTree = "<group>";
+		};
+		5B5A6B6E1E3870690052F253 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A6B6F1E3870690052F253 /* JetPack */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		5B5A6B6F1E3870690052F253 /* JetPack */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A6B701E3870690052F253 /* AutodisposePool.swift */,
+				5B5A6B711E3870690052F253 /* DeinitObservable.swift */,
+				5B5A6B721E3870690052F253 /* Disposable.swift */,
+				5B5A6B731E3870690052F253 /* NSObject+DeinitObservable.swift */,
+				5B5A6B741E3870690052F253 /* NSObject+Pool.swift */,
+				5B5A6B751E3870690052F253 /* Observable.swift */,
+				5B5A6B761E3870690052F253 /* Pipe.swift */,
+				5B5A6B771E3870690052F253 /* Signal+Binding.swift */,
+				5B5A6B781E3870690052F253 /* Signal+BooleanType.swift */,
+				5B5A6B791E3870690052F253 /* Signal+Comparable.swift */,
+				5B5A6B7A1E3870690052F253 /* Signal+Conversion.swift */,
+				5B5A6B7B1E3870690052F253 /* Signal+Equatable.swift */,
+				5B5A6B7C1E3870690052F253 /* Signal+KVO.swift */,
+				5B5A6B7D1E3870690052F253 /* Signal+Operations.swift */,
+				5B5A6B7E1E3870690052F253 /* Signal+Void.swift */,
+				5B5A6B7F1E3870690052F253 /* Signal.swift */,
+				5B5A6B801E3870690052F253 /* Subscription.swift */,
+				5B5A6B811E3870690052F253 /* UIKit+Signal */,
+				5B5A6B8D1E3870690052F253 /* UIView+Signal.swift */,
+			);
+			path = JetPack;
+			sourceTree = "<group>";
+		};
+		5B5A6B811E3870690052F253 /* UIKit+Signal */ = {
+			isa = PBXGroup;
+			children = (
+				5B5A6B821E3870690052F253 /* ControlProxy.h */,
+				5B5A6B831E3870690052F253 /* ControlProxy.m */,
+				5B5A6B841E3870690052F253 /* UIButton+Signal.swift */,
+				5B5A6B851E3870690052F253 /* UIControl+Signal.swift */,
+				5B5A6B861E3870690052F253 /* UIDatePicker+Signal.swift */,
+				5B5A6B881E3870690052F253 /* UISlider+Signal.swift */,
+				5B5A6B891E3870690052F253 /* UIStepper+Signal.swift */,
+				5B5A6B8A1E3870690052F253 /* UISwitch+Signal.swift */,
+				5B5A6B8B1E3870690052F253 /* UITextField+Signal.swift */,
+				5B5A6B8C1E3870690052F253 /* USegmentedControl+Signal.swift */,
+			);
+			path = "UIKit+Signal";
+			sourceTree = "<group>";
+		};
+		5BB81A561E3989F90032DA3A /* Credentials Store */ = {
+			isa = PBXGroup;
+			children = (
+				5BB81A571E398A050032DA3A /* CredentialsStore.swift */,
+			);
+			path = "Credentials Store";
+			sourceTree = "<group>";
+		};
+		5BB81A591E3994330032DA3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BB81A5A1E3994420032DA3A /* NetworkClient+Token.swift */,
+				5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,8 +469,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB81A581E398A050032DA3A /* CredentialsStore.swift in Sources */,
+				5B5A6B911E3870690052F253 /* NSObject+DeinitObservable.swift in Sources */,
 				5B4518961E3840DA0073CE61 /* ViewController.swift in Sources */,
+				5B5A6B901E3870690052F253 /* Disposable.swift in Sources */,
+				5B5A6BA01E3870690052F253 /* UIButton+Signal.swift in Sources */,
+				5B5A6BA41E3870690052F253 /* UISlider+Signal.swift in Sources */,
+				5B2864811E3C2E66000F6232 /* TokenDeserializer.swift in Sources */,
+				5B5A6BA61E3870690052F253 /* UISwitch+Signal.swift in Sources */,
+				5B5A6B9F1E3870690052F253 /* ControlProxy.m in Sources */,
+				5B5A6B9D1E3870690052F253 /* Signal.swift in Sources */,
+				5BB81A5B1E3994420032DA3A /* NetworkClient+Token.swift in Sources */,
+				5B28647E1E3C2E66000F6232 /* CollectionDeserializer.swift in Sources */,
+				5B2864801E3C2E66000F6232 /* SurveyDeserializer.swift in Sources */,
+				5B5A6B981E3870690052F253 /* Signal+Conversion.swift in Sources */,
+				5B5A6BA51E3870690052F253 /* UIStepper+Signal.swift in Sources */,
+				5B5A6B9A1E3870690052F253 /* Signal+KVO.swift in Sources */,
+				5B5A6BA11E3870690052F253 /* UIControl+Signal.swift in Sources */,
+				5B5A6B941E3870690052F253 /* Pipe.swift in Sources */,
+				5B28647F1E3C2E66000F6232 /* Deserializer.swift in Sources */,
+				5B5A6B921E3870690052F253 /* NSObject+Pool.swift in Sources */,
+				5B5A6BA81E3870690052F253 /* USegmentedControl+Signal.swift in Sources */,
+				5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */,
+				5B5A6B931E3870690052F253 /* Observable.swift in Sources */,
+				5B5A6BA71E3870690052F253 /* UITextField+Signal.swift in Sources */,
+				5B28646E1E3B0129000F6232 /* Survey.swift in Sources */,
 				5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */,
+				5B5A6B951E3870690052F253 /* Signal+Binding.swift in Sources */,
+				5B5A6B8E1E3870690052F253 /* AutodisposePool.swift in Sources */,
+				5B5A6BA21E3870690052F253 /* UIDatePicker+Signal.swift in Sources */,
+				5B5A6B6D1E386F520052F253 /* NetworkClient.swift in Sources */,
+				5B5A6B991E3870690052F253 /* Signal+Equatable.swift in Sources */,
+				5B2864821E3C2E66000F6232 /* EntityDeserializer.swift in Sources */,
+				5B5A6B9E1E3870690052F253 /* Subscription.swift in Sources */,
+				5B5A6B9C1E3870690052F253 /* Signal+Void.swift in Sources */,
+				5B5A6B961E3870690052F253 /* Signal+BooleanType.swift in Sources */,
+				5B5A6B9B1E3870690052F253 /* Signal+Operations.swift in Sources */,
+				5B5A6B971E3870690052F253 /* Signal+Comparable.swift in Sources */,
+				5B5A6BA91E3870690052F253 /* UIView+Signal.swift in Sources */,
+				5B5A6B8F1E3870690052F253 /* DeinitObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +649,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SurveyAppBridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -430,6 +663,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SurveyAppBridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -481,6 +715,7 @@
 				5B4518AF1E3840DB0073CE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B4518B01E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +724,7 @@
 				5B4518B21E3840DB0073CE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
