@@ -12,12 +12,8 @@ class SurveysListViewController: UIViewController {
   
   @IBOutlet private weak var collectionView: UICollectionView!
   @IBOutlet private weak var takeSurveyButton: UIButton!
-  @IBOutlet private weak var pageControl: UIPageControl! {
-    didSet {
-      pageControl.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
-    }
-  }
-  
+  @IBOutlet private weak var pageControl: VerticalPageControl!
+
   private let model = SurveysListModel()
   private var adapter: CollectionViewAdapter<Survey>!
   
@@ -29,14 +25,9 @@ class SurveysListViewController: UIViewController {
     addRefreshButton()
     setupTableView()
     
-    model.indexPathOfHighlightedItem.map { $0.row }.subscribeNext { [weak self] index in
-      self?.pageControl.currentPage = index
-    }.ownedBy(self)
-    
     model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
       guard let _self = self else { return }
       _self.pageControl.numberOfPages = _self.model.surveysDataAdapter.numberOfObjectsInSection(0)
-      print(_self.pageControl.numberOfPages)
     }.ownedBy(self)
     
     model.fetchSurveys()
@@ -48,7 +39,8 @@ class SurveysListViewController: UIViewController {
     button.selectionSignal.subscribeNext { [weak self] in
       self?.model.fetchSurveys()
       self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
-      }.ownedBy(self)
+      self?.pageControl.currentPage = 0
+    }.ownedBy(self)
     let refreshButtonItem = UIBarButtonItem(customView: button)
     navigationItem.leftBarButtonItem = refreshButtonItem
   }
@@ -62,25 +54,37 @@ class SurveysListViewController: UIViewController {
     }
     
     adapter.isDragging.subscribeNext { [weak self] _, isDragging in
-      UIView.animate(withDuration: 0.3) {
+      UIView.animate(withDuration: 0.15) {
         self?.takeSurveyButton.alpha = isDragging ? 0.0 : 1.0
       }
     }.ownedBy(self)
     
     adapter.didEndDecelerating.subscribeNext { [weak self] _ in
-      if let indexPaths = self?.collectionView.indexPathsForVisibleItems,
-        let indexPath = indexPaths.first {
-        self?.model.highlightItem(at: indexPath)
-      }
+      guard let _self = self else { return }
+      
+      let pageHeight = _self.collectionView.frame.size.height
+      let currentPage = Int(_self.collectionView.contentOffset.y / pageHeight)
+      
+      self?.model.highlightItem(at: IndexPath(row: currentPage, section: 0))
+      
+    }.ownedBy(self)
+    
+    model.indexPathOfHighlightedItem.subscribeNext { [weak self] in
+      self?.pageControl.currentPage = $0.row
     }.ownedBy(self)
   }
   
   @IBAction
   private func takeSurvey(sender: AnyObject?) {
     let detailsModel = model.createDetailsModelForHighlightedItem()
-    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: SurveyDetailsViewController.self)) as! SurveyDetailsViewController
+    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: SurveyDetailsViewController.self)) as! SurveyDetailsViewController //TODO: make generic
     controller.model = detailsModel
     navigationController?.pushViewController(controller, animated: true)
+  }
+  
+  @IBAction
+  private func selectPage(sender: VerticalPageControl) {
+    collectionView.scrollToItem(at: IndexPath(item: sender.currentPage, section: 0), at: .centeredVertically, animated: true)
   }
   
   @objc
