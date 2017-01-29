@@ -12,4 +12,10 @@ class SurveyDetailsViewController: UIViewController {
   
   var model: SurveyDetailsModel!
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    addBackButton()
+  }
+  
 }

@@ -10,7 +10,19 @@ import UIKit
 
 class SurveysNavigationController: UINavigationController {
   
-//  init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
-//    
-//  }
+  override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
+    super.init(navigationBarClass: DarkNavigationBar.self, toolbarClass: nil)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    let bar = DarkNavigationBar(frame: CGRect.zero)
+    setValue(bar, forKey: "navigationBar")
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    navigationBar.applyAttributes(from: .navigationHeader)
+  }
 }

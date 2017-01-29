@@ -12,6 +12,11 @@ class SurveysListViewController: UIViewController {
   
   @IBOutlet private weak var collectionView: UICollectionView!
   @IBOutlet private weak var takeSurveyButton: UIButton!
+  @IBOutlet private weak var pageControl: UIPageControl! {
+    didSet {
+      pageControl.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2.0)
+    }
+  }
   
   private let model = SurveysListModel()
   private var adapter: CollectionViewAdapter<Survey>!
@@ -19,6 +24,36 @@ class SurveysListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    title = "SURVEYS" //TODO: Localize
+    
+    addRefreshButton()
+    setupTableView()
+    
+    model.indexPathOfHighlightedItem.map { $0.row }.subscribeNext { [weak self] index in
+      self?.pageControl.currentPage = index
+    }.ownedBy(self)
+    
+    model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
+      guard let _self = self else { return }
+      _self.pageControl.numberOfPages = _self.model.surveysDataAdapter.numberOfObjectsInSection(0)
+      print(_self.pageControl.numberOfPages)
+    }.ownedBy(self)
+    
+    model.fetchSurveys()
+  }
+  
+  private func addRefreshButton() {
+    let button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
+    button.setImage(UIImage(named: "refresh_icon"), for: .normal)
+    button.selectionSignal.subscribeNext { [weak self] in
+      self?.model.fetchSurveys()
+      self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+      }.ownedBy(self)
+    let refreshButtonItem = UIBarButtonItem(customView: button)
+    navigationItem.leftBarButtonItem = refreshButtonItem
+  }
+  
+  private func setupTableView() {
     adapter = CollectionViewAdapter(dataSource: model.surveysDataAdapter, collectionView: collectionView)
     adapter.registerCellClass(SurveyCell.self)
     adapter.nibNameForObjectMatching = { _ in return String(describing: SurveyCell.self) }
@@ -34,19 +69,23 @@ class SurveysListViewController: UIViewController {
     
     adapter.didEndDecelerating.subscribeNext { [weak self] _ in
       if let indexPaths = self?.collectionView.indexPathsForVisibleItems,
-      let indexPath = indexPaths.first {
+        let indexPath = indexPaths.first {
         self?.model.highlightItem(at: indexPath)
       }
     }.ownedBy(self)
-    
-    model.fetchSurveys()
   }
   
-  @IBAction private func takeSurvey(sender: AnyObject?) {
+  @IBAction
+  private func takeSurvey(sender: AnyObject?) {
     let detailsModel = model.createDetailsModelForHighlightedItem()
     let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: SurveyDetailsViewController.self)) as! SurveyDetailsViewController
     controller.model = detailsModel
     navigationController?.pushViewController(controller, animated: true)
+  }
+  
+  @objc
+  private func refresh(sender: AnyObject?) {
+    model.fetchSurveys()
   }
   
 }

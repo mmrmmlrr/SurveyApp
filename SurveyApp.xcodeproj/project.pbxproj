@@ -65,6 +65,13 @@
 		5BDD27011E3C8EE00061AC6B /* SurveyDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27001E3C8EE00061AC6B /* SurveyDetailsModel.swift */; };
 		5BDD27031E3C8EEA0061AC6B /* SurveyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27021E3C8EEA0061AC6B /* SurveyDetailsViewController.swift */; };
 		5BDD27061E3C914E0061AC6B /* SurveysNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27051E3C914E0061AC6B /* SurveysNavigationController.swift */; };
+		5BDD270C1E3C932F0061AC6B /* DarkBlurringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27091E3C932F0061AC6B /* DarkBlurringView.swift */; };
+		5BDD270D1E3C932F0061AC6B /* DarkNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD270B1E3C932F0061AC6B /* DarkNavigationBar.swift */; };
+		5BDD27101E3C95390061AC6B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD270F1E3C95390061AC6B /* Colors.swift */; };
+		5BDD27131E3C95FF0061AC6B /* UIColor+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27121E3C95FF0061AC6B /* UIColor+Creation.swift */; };
+		5BDD27151E3C96E50061AC6B /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27141E3C96E50061AC6B /* TextStyles.swift */; };
+		5BDD27171E3C97190061AC6B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27161E3C97190061AC6B /* Fonts.swift */; };
+		5BDD27191E3C9D990061AC6B /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */; };
 		A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +151,13 @@
 		5BDD27001E3C8EE00061AC6B /* SurveyDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailsModel.swift; sourceTree = "<group>"; };
 		5BDD27021E3C8EEA0061AC6B /* SurveyDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyDetailsViewController.swift; sourceTree = "<group>"; };
 		5BDD27051E3C914E0061AC6B /* SurveysNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveysNavigationController.swift; sourceTree = "<group>"; };
+		5BDD27091E3C932F0061AC6B /* DarkBlurringView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkBlurringView.swift; sourceTree = "<group>"; };
+		5BDD270B1E3C932F0061AC6B /* DarkNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkNavigationBar.swift; sourceTree = "<group>"; };
+		5BDD270F1E3C95390061AC6B /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5BDD27121E3C95FF0061AC6B /* UIColor+Creation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Creation.swift"; sourceTree = "<group>"; };
+		5BDD27141E3C96E50061AC6B /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		5BDD27161E3C97190061AC6B /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackButton.swift"; sourceTree = "<group>"; };
 		79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -271,6 +285,9 @@
 		5B4518921E3840DA0073CE61 /* SurveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				5BDD27111E3C95FF0061AC6B /* Extensions */,
+				5BDD270E1E3C952D0061AC6B /* Appearance */,
+				5BDD27071E3C932F0061AC6B /* View */,
 				5B2864831E3C32FD000F6232 /* View Controllers */,
 				5B28646C1E3B0120000F6232 /* Entities */,
 				5B5A6B6E1E3870690052F253 /* Vendors */,
@@ -406,6 +423,51 @@
 				5BDD27051E3C914E0061AC6B /* SurveysNavigationController.swift */,
 			);
 			path = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		5BDD27071E3C932F0061AC6B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD27081E3C932F0061AC6B /* Dark Blurring View */,
+				5BDD270A1E3C932F0061AC6B /* Dark Navigation Bar */,
+			);
+			name = View;
+			path = SurveyApp/View;
+			sourceTree = SOURCE_ROOT;
+		};
+		5BDD27081E3C932F0061AC6B /* Dark Blurring View */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD27091E3C932F0061AC6B /* DarkBlurringView.swift */,
+			);
+			path = "Dark Blurring View";
+			sourceTree = "<group>";
+		};
+		5BDD270A1E3C932F0061AC6B /* Dark Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD270B1E3C932F0061AC6B /* DarkNavigationBar.swift */,
+			);
+			path = "Dark Navigation Bar";
+			sourceTree = "<group>";
+		};
+		5BDD270E1E3C952D0061AC6B /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD270F1E3C95390061AC6B /* Colors.swift */,
+				5BDD27141E3C96E50061AC6B /* TextStyles.swift */,
+				5BDD27161E3C97190061AC6B /* Fonts.swift */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		5BDD27111E3C95FF0061AC6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD27121E3C95FF0061AC6B /* UIColor+Creation.swift */,
+				5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,6 +627,7 @@
 			files = (
 				5BB81A581E398A050032DA3A /* CredentialsStore.swift in Sources */,
 				5B5A6B911E3870690052F253 /* NSObject+DeinitObservable.swift in Sources */,
+				5BDD270D1E3C932F0061AC6B /* DarkNavigationBar.swift in Sources */,
 				5B28648E1E3C37C5000F6232 /* CollectionViewAdapter.swift in Sources */,
 				5BDD26F11E3C399D0061AC6B /* ObjectConsuming.swift in Sources */,
 				5B5A6B901E3870690052F253 /* Disposable.swift in Sources */,
@@ -579,6 +642,8 @@
 				5B5A6B9D1E3870690052F253 /* Signal.swift in Sources */,
 				5BB81A5B1E3994420032DA3A /* NetworkClient+Token.swift in Sources */,
 				5B28647E1E3C2E66000F6232 /* CollectionDeserializer.swift in Sources */,
+				5BDD27171E3C97190061AC6B /* Fonts.swift in Sources */,
+				5BDD27101E3C95390061AC6B /* Colors.swift in Sources */,
 				5B2864801E3C2E66000F6232 /* SurveyDeserializer.swift in Sources */,
 				5B5A6B981E3870690052F253 /* Signal+Conversion.swift in Sources */,
 				5B5A6BA51E3870690052F253 /* UIStepper+Signal.swift in Sources */,
@@ -601,17 +666,21 @@
 				5B5A6B8E1E3870690052F253 /* AutodisposePool.swift in Sources */,
 				5B5A6BA21E3870690052F253 /* UIDatePicker+Signal.swift in Sources */,
 				5B5A6B6D1E386F520052F253 /* NetworkClient.swift in Sources */,
+				5BDD27131E3C95FF0061AC6B /* UIColor+Creation.swift in Sources */,
 				5BDD26FC1E3C3E3C0061AC6B /* SurveyCell.swift in Sources */,
 				5B2864901E3C37C5000F6232 /* OrderedList.swift in Sources */,
 				5B5A6B991E3870690052F253 /* Signal+Equatable.swift in Sources */,
 				5B2864821E3C2E66000F6232 /* EntityDeserializer.swift in Sources */,
 				5B28648F1E3C37C5000F6232 /* ObjectsDataSource.swift in Sources */,
+				5BDD270C1E3C932F0061AC6B /* DarkBlurringView.swift in Sources */,
 				5B5A6B9E1E3870690052F253 /* Subscription.swift in Sources */,
 				5B5A6B9C1E3870690052F253 /* Signal+Void.swift in Sources */,
 				5BDD26F91E3C3B6B0061AC6B /* Array+RemoveDuplicates.swift in Sources */,
+				5BDD27151E3C96E50061AC6B /* TextStyles.swift in Sources */,
 				5B5A6B961E3870690052F253 /* Signal+BooleanType.swift in Sources */,
 				5B5A6B9B1E3870690052F253 /* Signal+Operations.swift in Sources */,
 				5B5A6B971E3870690052F253 /* Signal+Comparable.swift in Sources */,
+				5BDD27191E3C9D990061AC6B /* UIViewController+BackButton.swift in Sources */,
 				5B5A6BA91E3870690052F253 /* UIView+Signal.swift in Sources */,
 				5B5A6B8F1E3870690052F253 /* DeinitObservable.swift in Sources */,
 				5B2864881E3C3567000F6232 /* SurveysListModel.swift in Sources */,
