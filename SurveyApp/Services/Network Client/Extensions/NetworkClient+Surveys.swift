@@ -52,7 +52,13 @@ extension NetworkClient {
     survey3.uid = "03"
     survey3.imageURLString = "https://media-cdn.tripadvisor.com/media/photo-s/02/4b/65/5f/hotel-drisco-at-dusk.jpg"
     
-    return [survey1, survey2, survey3]
+    let survey4 = Survey()
+    survey4.hotelName = "Hotel 4"
+    survey4.description = "Description for hotel 4"
+    survey4.uid = "04"
+    survey4.imageURLString = "https://exp.cdn-hotels.com/hotels/1000000/150000/140600/140596/140596_275_z.jpg"
+
+    return [survey1, survey2, survey3, survey4, Survey(), Survey(), Survey()]
   }
 }
 

@@ -17,7 +17,7 @@ class SurveysListModel {
   }()
   
   private let surveysList = OrderedList<Survey>()
-  private var indexPathOfHighlightedItem = IndexPath(row: 0, section: 0)
+  let indexPathOfHighlightedItem = Observable(IndexPath(row: 0, section: 0))
   private let pool = AutodisposePool()
   
   private var subscriptionForSurveysRequest: Disposable?
@@ -35,11 +35,11 @@ class SurveysListModel {
   }
   
   func highlightItem(at indexPath: IndexPath) {
-    indexPathOfHighlightedItem = indexPath
+    indexPathOfHighlightedItem.value = indexPath
   }
   
   func createDetailsModelForHighlightedItem() -> SurveyDetailsModel {
-    let survey = surveysDataAdapter.objectAtIndexPath(indexPathOfHighlightedItem)!
+    let survey = surveysDataAdapter.objectAtIndexPath(indexPathOfHighlightedItem.value)!
     
     return SurveyDetailsModel(survey)
   }

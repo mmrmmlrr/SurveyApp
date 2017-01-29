@@ -229,7 +229,6 @@
 		5B2864831E3C32FD000F6232 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5BDD27071E3C932F0061AC6B /* View */,
 				5BDD27041E3C91420061AC6B /* Navigation Controller */,
 				5BDD26FF1E3C8ED30061AC6B /* Survey Details */,
 				5B2864841E3C330B000F6232 /* Surveys List */,
@@ -288,6 +287,7 @@
 			children = (
 				5BDD27111E3C95FF0061AC6B /* Extensions */,
 				5BDD270E1E3C952D0061AC6B /* Appearance */,
+				5BDD27071E3C932F0061AC6B /* View */,
 				5B2864831E3C32FD000F6232 /* View Controllers */,
 				5B28646C1E3B0120000F6232 /* Entities */,
 				5B5A6B6E1E3870690052F253 /* Vendors */,
