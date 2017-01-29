@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SurveysListViewController: UIViewController {
   
@@ -24,11 +25,7 @@ class SurveysListViewController: UIViewController {
     
     addRefreshButton()
     setupTableView()
-    
-    model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
-      guard let _self = self else { return }
-      _self.pageControl.numberOfPages = _self.model.surveysDataAdapter.numberOfObjectsInSection(0)
-    }.ownedBy(self)
+    subscribeForUpdatesInModel()
     
     model.fetchSurveys()
   }
@@ -69,8 +66,20 @@ class SurveysListViewController: UIViewController {
       
     }.ownedBy(self)
     
+  }
+  
+  private func subscribeForUpdatesInModel() {
     model.indexPathOfHighlightedItem.subscribeNext { [weak self] in
       self?.pageControl.currentPage = $0.row
+    }.ownedBy(self)
+    
+    model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
+      guard let _self = self else { return }
+      _self.pageControl.numberOfPages = _self.model.surveysDataAdapter.numberOfObjectsInSection(0)
+    }.ownedBy(self)
+    
+    model.isFetchingSurveys.subscribeNext { isFetching in
+      isFetching ? SVProgressHUD.show() : SVProgressHUD.dismiss()
     }.ownedBy(self)
   }
   

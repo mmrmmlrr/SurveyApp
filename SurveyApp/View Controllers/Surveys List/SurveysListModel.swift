@@ -10,6 +10,9 @@ import Foundation
 
 class SurveysListModel {
   
+  let indexPathOfHighlightedItem = Observable(IndexPath(row: 0, section: 0))
+  let isFetchingSurveys = Observable(false)
+  
   private(set) lazy var surveysDataAdapter: OrderedListDataAdapter<Survey> = {
     let adapter = OrderedListDataAdapter(list: self.surveysList)
     
@@ -17,14 +20,15 @@ class SurveysListModel {
   }()
   
   private let surveysList = OrderedList<Survey>()
-  let indexPathOfHighlightedItem = Observable(IndexPath(row: 0, section: 0))
   private let pool = AutodisposePool()
   
   private var subscriptionForSurveysRequest: Disposable?
   
   func fetchSurveys() {
+    isFetchingSurveys.sendNext(true)
     subscriptionForSurveysRequest?.dispose()
     subscriptionForSurveysRequest = NetworkClient.shared.getSurveys().subscribeNext { [weak self] response in
+      self?.isFetchingSurveys.sendNext(false)
       switch response {
       case .success(let surveys):
         self?.surveysList.replaceWith(surveys)
