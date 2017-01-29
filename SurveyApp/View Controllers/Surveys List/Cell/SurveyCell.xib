@@ -71,6 +71,9 @@
                             <constraint firstAttribute="bottom" secondItem="bWb-WU-Yz4" secondAttribute="bottom" id="s05-LD-Qg2"/>
                         </constraints>
                     </view>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="h0U-oN-VnJ">
+                        <rect key="frame" x="122" y="223" width="20" height="20"/>
+                    </activityIndicatorView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,6 +85,7 @@
                 <constraint firstItem="cmT-Iv-t6i" firstAttribute="top" secondItem="EOk-Cy-Dy9" secondAttribute="top" id="JNS-yN-DBb"/>
                 <constraint firstItem="A1s-ZY-nqQ" firstAttribute="top" secondItem="EOk-Cy-Dy9" secondAttribute="top" constant="44" id="KhD-6e-xdZ"/>
                 <constraint firstItem="A1s-ZY-nqQ" firstAttribute="height" secondItem="EOk-Cy-Dy9" secondAttribute="height" multiplier="0.33" id="Psi-GP-3g6"/>
+                <constraint firstItem="h0U-oN-VnJ" firstAttribute="centerX" secondItem="EOk-Cy-Dy9" secondAttribute="centerX" id="bDi-Gy-KIM"/>
                 <constraint firstItem="bwm-Yc-bs6" firstAttribute="centerY" secondItem="EOk-Cy-Dy9" secondAttribute="centerY" id="daV-c9-siq"/>
                 <constraint firstAttribute="trailing" secondItem="A1s-ZY-nqQ" secondAttribute="trailing" id="flf-Ni-j54"/>
                 <constraint firstAttribute="bottom" secondItem="cmT-Iv-t6i" secondAttribute="bottom" id="jVx-8C-wj8"/>
@@ -90,9 +94,11 @@
                 <constraint firstItem="w57-mr-sb2" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="pZO-Nh-tuE"/>
                 <constraint firstItem="bwm-Yc-bs6" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="rfr-df-O4H"/>
                 <constraint firstItem="A1s-ZY-nqQ" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="tpZ-9U-TLd"/>
+                <constraint firstItem="h0U-oN-VnJ" firstAttribute="centerY" secondItem="EOk-Cy-Dy9" secondAttribute="centerY" id="zw0-9Z-5rQ"/>
             </constraints>
             <size key="customSize" width="264" height="466"/>
             <connections>
+                <outlet property="activityIndicator" destination="h0U-oN-VnJ" id="WGk-4O-ASL"/>
                 <outlet property="descriptionLabel" destination="83R-ly-oht" id="jMm-Rd-Zac"/>
                 <outlet property="imageView" destination="cmT-Iv-t6i" id="6ri-xP-l40"/>
                 <outlet property="titleLabel" destination="p3X-VU-xjA" id="FI8-lV-k9k"/>

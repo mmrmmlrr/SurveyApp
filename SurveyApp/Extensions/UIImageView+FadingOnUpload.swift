@@ -13,8 +13,9 @@ import SDWebImage
 
 extension UIImageView {
   
-  public func setImageFaded(with url: URL!) {
+  public func setImageFaded(with url: URL!, completion: ((Void) -> Void)? = nil) {
     self.sd_setImage(with: url) { (image, error, cacheType, url) in
+      completion?()
       guard image != nil, cacheType == .none else { return }
       UIView.transition(
         with: self,
