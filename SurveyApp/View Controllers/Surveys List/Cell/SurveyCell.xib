@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,6 +20,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="264" height="466"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotel_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="bwm-Yc-bs6" userLabel="Placeholder">
+                        <rect key="frame" x="0.0" y="145" width="264" height="176"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bwm-Yc-bs6" secondAttribute="height" multiplier="3:2" id="WQu-vv-w6e"/>
+                        </constraints>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmT-Iv-t6i">
                         <rect key="frame" x="0.0" y="0.0" width="264" height="466"/>
                     </imageView>
@@ -68,17 +75,20 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="bwm-Yc-bs6" firstAttribute="centerX" secondItem="EOk-Cy-Dy9" secondAttribute="centerX" id="70L-CX-O3u"/>
                 <constraint firstAttribute="trailing" secondItem="w57-mr-sb2" secondAttribute="trailing" id="Cqe-s2-SbG"/>
                 <constraint firstItem="w57-mr-sb2" firstAttribute="top" secondItem="EOk-Cy-Dy9" secondAttribute="top" id="D4A-QH-FVn"/>
                 <constraint firstAttribute="trailing" secondItem="cmT-Iv-t6i" secondAttribute="trailing" id="EzW-ot-fIl"/>
                 <constraint firstItem="cmT-Iv-t6i" firstAttribute="top" secondItem="EOk-Cy-Dy9" secondAttribute="top" id="JNS-yN-DBb"/>
                 <constraint firstItem="A1s-ZY-nqQ" firstAttribute="top" secondItem="EOk-Cy-Dy9" secondAttribute="top" constant="44" id="KhD-6e-xdZ"/>
                 <constraint firstItem="A1s-ZY-nqQ" firstAttribute="height" secondItem="EOk-Cy-Dy9" secondAttribute="height" multiplier="0.33" id="Psi-GP-3g6"/>
+                <constraint firstItem="bwm-Yc-bs6" firstAttribute="centerY" secondItem="EOk-Cy-Dy9" secondAttribute="centerY" id="daV-c9-siq"/>
                 <constraint firstAttribute="trailing" secondItem="A1s-ZY-nqQ" secondAttribute="trailing" id="flf-Ni-j54"/>
                 <constraint firstAttribute="bottom" secondItem="cmT-Iv-t6i" secondAttribute="bottom" id="jVx-8C-wj8"/>
                 <constraint firstAttribute="bottom" secondItem="w57-mr-sb2" secondAttribute="bottom" id="lS5-5T-CYl"/>
                 <constraint firstItem="cmT-Iv-t6i" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="nnc-Qg-Vbb"/>
                 <constraint firstItem="w57-mr-sb2" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="pZO-Nh-tuE"/>
+                <constraint firstItem="bwm-Yc-bs6" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="rfr-df-O4H"/>
                 <constraint firstItem="A1s-ZY-nqQ" firstAttribute="leading" secondItem="EOk-Cy-Dy9" secondAttribute="leading" id="tpZ-9U-TLd"/>
             </constraints>
             <size key="customSize" width="264" height="466"/>
@@ -90,4 +100,7 @@
             <point key="canvasLocation" x="124" y="189"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="hotel_placeholder" width="180" height="120"/>
+    </resources>
 </document>
