@@ -35,8 +35,6 @@ class SurveysListViewController: UIViewController {
     button.setImage(UIImage(named: "refresh_icon"), for: .normal)
     button.selectionSignal.subscribeNext { [weak self] in
       self?.model.fetchSurveys()
-      self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
-      self?.pageControl.currentPage = 0
     }.ownedBy(self)
     let refreshButtonItem = UIBarButtonItem(customView: button)
     navigationItem.leftBarButtonItem = refreshButtonItem
@@ -81,6 +79,11 @@ class SurveysListViewController: UIViewController {
     model.isFetchingSurveys.subscribeNext { isFetching in
       isFetching ? SVProgressHUD.show() : SVProgressHUD.dismiss()
     }.ownedBy(self)
+    
+    model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
+      self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+      self?.pageControl.currentPage = 0
+    }.ownedBy(self)
   }
   
   @IBAction
@@ -94,11 +97,6 @@ class SurveysListViewController: UIViewController {
   @IBAction
   private func selectPage(sender: VerticalPageControl) {
     collectionView.scrollToItem(at: IndexPath(item: sender.currentPage, section: 0), at: .centeredVertically, animated: true)
-  }
-  
-  @objc
-  private func refresh(sender: AnyObject?) {
-    model.fetchSurveys()
   }
   
 }

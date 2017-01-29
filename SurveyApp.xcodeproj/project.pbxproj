@@ -537,6 +537,7 @@
 				TargetAttributes = {
 					5B45188F1E3840DA0073CE61 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DV25EDJF6Q;
 						ProvisioningStyle = Automatic;
 					};
 					5B4518A31E3840DB0073CE61 = {
@@ -838,6 +839,7 @@
 			baseConfigurationReference = 0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DV25EDJF6Q;
 				INFOPLIST_FILE = SurveyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
@@ -852,6 +854,7 @@
 			baseConfigurationReference = 79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DV25EDJF6Q;
 				INFOPLIST_FILE = SurveyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
