@@ -24,7 +24,7 @@ extension NetworkClient {
 //    )
     
     let pipe = Pipe<NetworkResponse<[Survey]>>()
-    DispatchQueue.main.async {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
       pipe.sendNext(.success(self.fakeSurveys()))
     }
     

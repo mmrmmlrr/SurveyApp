@@ -14,11 +14,17 @@ class SurveyCell: UICollectionViewCell, ObjectConsuming {
   @IBOutlet private weak var titleLabel: UILabel!
   @IBOutlet private weak var descriptionLabel: UILabel!
   @IBOutlet private weak var imageView: UIImageView!
+  @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
   
   func applyObject(_ object: Survey) {
     titleLabel.text = object.hotelName
     descriptionLabel.text = object.description
-    imageView.sd_setImage(with: URL(string: object.imageURLString))
+    activityIndicator.alpha = 1.0
+    activityIndicator.startAnimating()
+    imageView.setImageFaded(with: URL(string: object.imageURLString)) {
+      self.activityIndicator.alpha = 0.0
+      self.activityIndicator.stopAnimating()
+    }
   }
   
 }
