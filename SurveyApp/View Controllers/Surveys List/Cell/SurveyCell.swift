@@ -18,7 +18,7 @@ class SurveyCell: UICollectionViewCell, ObjectConsuming {
   func applyObject(_ object: Survey) {
     titleLabel.text = object.hotelName
     descriptionLabel.text = object.description
-    imageView.sd_setImage(with: URL(string: object.imageURLString))
+    imageView.setImageFaded(with: URL(string: object.imageURLString))
   }
   
 }
