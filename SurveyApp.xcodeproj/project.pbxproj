@@ -72,6 +72,7 @@
 		5BDD27151E3C96E50061AC6B /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27141E3C96E50061AC6B /* TextStyles.swift */; };
 		5BDD27171E3C97190061AC6B /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27161E3C97190061AC6B /* Fonts.swift */; };
 		5BDD27191E3C9D990061AC6B /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */; };
+		5BDD27211E3D93600061AC6B /* VerticalPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD27201E3D93600061AC6B /* VerticalPageControl.swift */; };
 		A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +159,7 @@
 		5BDD27141E3C96E50061AC6B /* TextStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		5BDD27161E3C97190061AC6B /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackButton.swift"; sourceTree = "<group>"; };
+		5BDD27201E3D93600061AC6B /* VerticalPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalPageControl.swift; sourceTree = "<group>"; };
 		79E17D4ED396A1ED1C9F9DE0 /* Pods-SurveyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.release.xcconfig"; sourceTree = "<group>"; };
 		E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SurveyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -428,6 +430,7 @@
 		5BDD27071E3C932F0061AC6B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5BDD271F1E3D933F0061AC6B /* Vertical Page Control */,
 				5BDD27081E3C932F0061AC6B /* Dark Blurring View */,
 				5BDD270A1E3C932F0061AC6B /* Dark Navigation Bar */,
 			);
@@ -468,6 +471,14 @@
 				5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BDD271F1E3D933F0061AC6B /* Vertical Page Control */ = {
+			isa = PBXGroup;
+			children = (
+				5BDD27201E3D93600061AC6B /* VerticalPageControl.swift */,
+			);
+			path = "Vertical Page Control";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -674,6 +685,7 @@
 				5B28648F1E3C37C5000F6232 /* ObjectsDataSource.swift in Sources */,
 				5BDD270C1E3C932F0061AC6B /* DarkBlurringView.swift in Sources */,
 				5B5A6B9E1E3870690052F253 /* Subscription.swift in Sources */,
+				5BDD27211E3D93600061AC6B /* VerticalPageControl.swift in Sources */,
 				5B5A6B9C1E3870690052F253 /* Signal+Void.swift in Sources */,
 				5BDD26F91E3C3B6B0061AC6B /* Array+RemoveDuplicates.swift in Sources */,
 				5BDD27151E3C96E50061AC6B /* TextStyles.swift in Sources */,

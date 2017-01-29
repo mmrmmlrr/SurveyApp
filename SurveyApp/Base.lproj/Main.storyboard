@@ -69,17 +69,25 @@
                                     <action selector="takeSurveyWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6J-KC-DeW"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fJj-06-Tgf">
-                                <rect key="frame" x="316" y="315" width="39" height="37"/>
-                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCb-C8-YG3" customClass="VerticalPageControl" customModule="SurveyApp" customModuleProvider="target">
+                                <rect key="frame" x="345" y="328.5" width="10" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="AnK-6C-5DR"/>
+                                    <constraint firstAttribute="height" constant="10" id="L23-jg-UH0"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="selectPageWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="9H3-UG-9YT"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="t9B-sf-64H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3jP-3h-o0W"/>
-                            <constraint firstItem="fJj-06-Tgf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5fh-0L-Y7T"/>
+                            <constraint firstItem="yCb-C8-YG3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Xl-ap-zti"/>
                             <constraint firstAttribute="trailing" secondItem="t9B-sf-64H" secondAttribute="trailing" id="KZ2-Ws-fka"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t9B-sf-64H" secondAttribute="bottom" id="Rmx-fM-Sc3"/>
-                            <constraint firstAttribute="trailing" secondItem="fJj-06-Tgf" secondAttribute="trailing" constant="20" id="UH0-0O-STe"/>
+                            <constraint firstAttribute="trailing" secondItem="yCb-C8-YG3" secondAttribute="trailing" constant="20" id="Ybf-lV-T0l"/>
                             <constraint firstItem="QWz-2I-vDS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ztm-uU-DGV"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QWz-2I-vDS" secondAttribute="bottom" constant="91" id="bDC-hM-Wqd"/>
                             <constraint firstItem="t9B-sf-64H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tDr-Gk-pPf"/>
@@ -88,7 +96,7 @@
                     <navigationItem key="navigationItem" id="Z2C-Wz-vH9"/>
                     <connections>
                         <outlet property="collectionView" destination="t9B-sf-64H" id="REY-fh-tdh"/>
-                        <outlet property="pageControl" destination="fJj-06-Tgf" id="nJf-Rs-Owp"/>
+                        <outlet property="pageControl" destination="yCb-C8-YG3" id="9ug-LP-uDB"/>
                         <outlet property="takeSurveyButton" destination="QWz-2I-vDS" id="0Gx-xQ-sun"/>
                     </connections>
                 </viewController>
