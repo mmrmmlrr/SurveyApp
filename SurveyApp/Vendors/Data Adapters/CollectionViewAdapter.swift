@@ -60,14 +60,14 @@ public class CollectionViewAdapter <ObjectType>: NSObject, UICollectionViewDeleg
     dataSource.reloadDataSignal.subscribeNext { [weak self] in
       guard let strongSelf = self else { return }
       
-      UIView.animate(withDuration: 0.1, animations: {
-        strongSelf.collectionView.alpha = 0},
-        completion: { completed in
+//      UIView.animate(withDuration: 0.1, animations: {
+//        strongSelf.collectionView.alpha = 0},
+//        completion: { completed in
           strongSelf.collectionView.reloadData()
-          UIView.animate(withDuration: 0.2, animations: {
-            strongSelf.collectionView.alpha = 1
-          })
-      })
+//          UIView.animate(withDuration: 0.2, animations: {
+//            strongSelf.collectionView.alpha = 1
+//          })
+//      })
       }.putInto(pool)
     
     dataSource.didChangeObjectSignal.subscribeNext { [weak self] object, changeType, fromIndexPath, toIndexPath in

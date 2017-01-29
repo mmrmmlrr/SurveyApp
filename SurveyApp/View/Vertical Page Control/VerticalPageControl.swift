@@ -10,7 +10,7 @@ import UIKit
 
 class VerticalPageControl: UIControl {
   
-  var numberOfPages: Int = 15 {
+  var numberOfPages: Int = 0 {
     didSet { layoutContent() }
   }
   
