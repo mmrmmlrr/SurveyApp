@@ -81,7 +81,7 @@ class SurveysListViewController: UIViewController {
     }.ownedBy(self)
     
     model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
-      self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+      self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
       self?.pageControl.currentPage = 0
     }.ownedBy(self)
   }

@@ -15,6 +15,8 @@ class SurveyDetailsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    title = model.title
+    
     addBackButton()
   }
   
