@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class SurveysListViewController: UIViewController {
+class SurveysListViewController: UIViewController, ContainedInSurveyNavigationController {
   
   @IBOutlet private weak var collectionView: UICollectionView!
   @IBOutlet private weak var takeSurveyButton: UIButton!
@@ -97,10 +97,7 @@ class SurveysListViewController: UIViewController {
   
   @IBAction
   private func takeSurvey(sender: AnyObject?) {
-    let detailsModel = model.createDetailsModelForHighlightedItem()
-    let controller: SurveyDetailsViewController = Storyboard.main.correspondingController()
-    controller.model = detailsModel
-    navigationController?.pushViewController(controller, animated: true)
+    surveyNavigationController?.viewController(self, didRequestShowDetailsFor: model.highlightedSurvey())
   }
   
   @IBAction

@@ -8,6 +8,20 @@
 
 import UIKit
 
+protocol ContainedInSurveyNavigationController {
+  
+  var surveyNavigationController: SurveysNavigationController? { get }
+  
+}
+
+extension ContainedInSurveyNavigationController where Self: UIViewController {
+  
+  var surveyNavigationController: SurveysNavigationController? {
+    return navigationController as? SurveysNavigationController
+  }
+  
+}
+
 class SurveysNavigationController: UINavigationController, UINavigationControllerDelegate {
   
   override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
@@ -27,31 +41,16 @@ class SurveysNavigationController: UINavigationController, UINavigationControlle
     navigationBar.applyAttributes(from: .navigationHeader)
   }
   
-  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-    super.pushViewController(viewController, animated: true)
-    addSideMenuButton(to: viewController)
-  }
-  
-  override func setViewControllers(_ viewControllers: [UIViewController], animated: Bool) {
-    super.setViewControllers(viewControllers, animated: animated)
-    
-    viewControllers.forEach { self.addSideMenuButton(to: $0) }
-  }
-  
-  override var viewControllers: [UIViewController] {
-    didSet {
-      viewControllers.forEach { addSideMenuButton(to: $0) }
-    }
-  }
-  
-  override init(rootViewController: UIViewController) {
-    super.init(rootViewController: rootViewController)
-    addSideMenuButton(to: rootViewController)
-  }
-  
   func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
     addSideMenuButton(to: viewController)
     
+  }
+  
+  func viewController(_ viewController: UIViewController, didRequestShowDetailsFor survey: Survey) {
+    let detailsModel = SurveyDetailsModel(survey)
+    let controller: SurveyDetailsViewController = Storyboard.main.correspondingController()
+    controller.model = detailsModel
+    pushViewController(controller, animated: true)
   }
   
   private func addSideMenuButton(to controller: UIViewController) {
