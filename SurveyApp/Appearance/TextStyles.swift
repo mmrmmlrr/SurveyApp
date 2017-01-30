@@ -11,7 +11,11 @@ import HandyText
 extension TextStyle {
   
   static var navigationHeader: TextStyle {
-    return TextStyle(font: .avenir).withSize(20).heavy().withForegroundColor(.white)
+    return TextStyle(font: .avenir).withSize(20.0).heavy().withForegroundColor(.white)
+  }
+  
+  static var bigButton: TextStyle {
+    return TextStyle(font: .avenir).withSize(18.0).regular().withForegroundColor(.white)
   }
   
 }

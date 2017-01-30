@@ -10,6 +10,10 @@ import Foundation
 
 class SurveyDetailsModel {
   
+  var title: String {
+    return survey.hotelName
+  }
+  
   private let survey: Survey
   
   init(_ survey: Survey) {

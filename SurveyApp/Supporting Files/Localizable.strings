@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SurveyApp
+
+  Created by Aleksey on 30.01.17.
+  Copyright © 2017 aleksey chernish. All rights reserved.
+*/
+
+"surveys_list.navigation.title" = "SURVEYS";
+"surveys_list.take_survey_button.title" = "Take the survey";
+
+"alert.error.title" = "Error";
+"alert.action.accept" = "Ok";

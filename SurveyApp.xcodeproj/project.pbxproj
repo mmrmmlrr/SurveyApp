@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0154411E3EFC6D003C9058 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B01543E1E3EFC6D003C9058 /* Info.plist */; };
+		5B0154421E3EFC6D003C9058 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B01543F1E3EFC6D003C9058 /* Localizable.strings */; };
+		5B0154441E3EFC9E003C9058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0154431E3EFC9E003C9058 /* Assets.xcassets */; };
+		5B0154461E3EFCBB003C9058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0154451E3EFCBB003C9058 /* AppDelegate.swift */; };
+		5B0154491E3EFCF5003C9058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0154471E3EFCF5003C9058 /* LaunchScreen.storyboard */; };
+		5B01544A1E3EFCF5003C9058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0154481E3EFCF5003C9058 /* Main.storyboard */; };
+		5B01544C1E3EFE91003C9058 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01544B1E3EFE91003C9058 /* Storyboard.swift */; };
 		5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */; };
 		5B28646E1E3B0129000F6232 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28646D1E3B0129000F6232 /* Survey.swift */; };
 		5B28647E1E3C2E66000F6232 /* CollectionDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */; };
@@ -20,10 +27,6 @@
 		5B28648F1E3C37C5000F6232 /* ObjectsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28648B1E3C37C5000F6232 /* ObjectsDataSource.swift */; };
 		5B2864901E3C37C5000F6232 /* OrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28648C1E3C37C5000F6232 /* OrderedList.swift */; };
 		5B2864911E3C37C5000F6232 /* OrderedListDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28648D1E3C37C5000F6232 /* OrderedListDataAdapter.swift */; };
-		5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518931E3840DA0073CE61 /* AppDelegate.swift */; };
-		5B4518991E3840DA0073CE61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B4518971E3840DA0073CE61 /* Main.storyboard */; };
-		5B45189B1E3840DA0073CE61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B45189A1E3840DA0073CE61 /* Assets.xcassets */; };
-		5B45189E1E3840DA0073CE61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */; };
 		5B4518A91E3840DB0073CE61 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */; };
 		5B5A6B6D1E386F520052F253 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B6C1E386F520052F253 /* NetworkClient.swift */; };
 		5B5A6B8E1E3870690052F253 /* AutodisposePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B701E3870690052F253 /* AutodisposePool.swift */; };
@@ -53,6 +56,7 @@
 		5B5A6BA71E3870690052F253 /* UITextField+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8B1E3870690052F253 /* UITextField+Signal.swift */; };
 		5B5A6BA81E3870690052F253 /* USegmentedControl+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8C1E3870690052F253 /* USegmentedControl+Signal.swift */; };
 		5B5A6BA91E3870690052F253 /* UIView+Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B8D1E3870690052F253 /* UIView+Signal.swift */; };
+		5B7CB2F71E3EF84500CB3C03 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7CB2F61E3EF84500CB3C03 /* String+Localization.swift */; };
 		5BB81A581E398A050032DA3A /* CredentialsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB81A571E398A050032DA3A /* CredentialsStore.swift */; };
 		5BB81A5B1E3994420032DA3A /* NetworkClient+Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB81A5A1E3994420032DA3A /* NetworkClient+Token.swift */; };
 		5BDD26F11E3C399D0061AC6B /* ObjectConsuming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDD26F01E3C399D0061AC6B /* ObjectConsuming.swift */; };
@@ -89,6 +93,13 @@
 
 /* Begin PBXFileReference section */
 		0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5B01543E1E3EFC6D003C9058 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B01543F1E3EFC6D003C9058 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5B0154431E3EFC9E003C9058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B0154451E3EFCBB003C9058 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B0154471E3EFCF5003C9058 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B0154481E3EFCF5003C9058 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5B01544B1E3EFE91003C9058 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Surveys.swift"; sourceTree = "<group>"; };
 		5B28646D1E3B0129000F6232 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDeserializer.swift; sourceTree = "<group>"; };
@@ -103,11 +114,6 @@
 		5B28648C1E3C37C5000F6232 /* OrderedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedList.swift; sourceTree = "<group>"; };
 		5B28648D1E3C37C5000F6232 /* OrderedListDataAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedListDataAdapter.swift; sourceTree = "<group>"; };
 		5B4518901E3840DA0073CE61 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B4518931E3840DA0073CE61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B4518981E3840DA0073CE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5B45189A1E3840DA0073CE61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5B45189D1E3840DA0073CE61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5B45189F1E3840DA0073CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
 		5B4518AA1E3840DB0073CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 		5B5A6B8B1E3870690052F253 /* UITextField+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Signal.swift"; sourceTree = "<group>"; };
 		5B5A6B8C1E3870690052F253 /* USegmentedControl+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "USegmentedControl+Signal.swift"; sourceTree = "<group>"; };
 		5B5A6B8D1E3870690052F253 /* UIView+Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Signal.swift"; sourceTree = "<group>"; };
+		5B7CB2F61E3EF84500CB3C03 /* String+Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		5BB81A571E398A050032DA3A /* CredentialsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
 		5BB81A5A1E3994420032DA3A /* NetworkClient+Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Token.swift"; sourceTree = "<group>"; };
 		5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SurveyAppBridgingHeader.h; sourceTree = SOURCE_ROOT; };
@@ -200,6 +207,26 @@
 				E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B01543B1E3EFC33003C9058 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B0154471E3EFCF5003C9058 /* LaunchScreen.storyboard */,
+				5B01544B1E3EFE91003C9058 /* Storyboard.swift */,
+				5B0154481E3EFCF5003C9058 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5B01543C1E3EFC6D003C9058 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B0154431E3EFC9E003C9058 /* Assets.xcassets */,
+				5B01543E1E3EFC6D003C9058 /* Info.plist */,
+				5B01543F1E3EFC6D003C9058 /* Localizable.strings */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5B28646C1E3B0120000F6232 /* Entities */ = {
@@ -289,6 +316,10 @@
 		5B4518921E3840DA0073CE61 /* SurveyApp */ = {
 			isa = PBXGroup;
 			children = (
+				5B0154451E3EFCBB003C9058 /* AppDelegate.swift */,
+				5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */,
+				5B01543C1E3EFC6D003C9058 /* Supporting Files */,
+				5B01543B1E3EFC33003C9058 /* Storyboards */,
 				5BDD27111E3C95FF0061AC6B /* Extensions */,
 				5BDD270E1E3C952D0061AC6B /* Appearance */,
 				5BDD27071E3C932F0061AC6B /* View */,
@@ -296,12 +327,6 @@
 				5B28646C1E3B0120000F6232 /* Entities */,
 				5B5A6B6E1E3870690052F253 /* Vendors */,
 				5B5A6B6A1E386F4A0052F253 /* Services */,
-				5B4518931E3840DA0073CE61 /* AppDelegate.swift */,
-				5B4518971E3840DA0073CE61 /* Main.storyboard */,
-				5B45189A1E3840DA0073CE61 /* Assets.xcassets */,
-				5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */,
-				5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */,
-				5B45189F1E3840DA0073CE61 /* Info.plist */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
@@ -470,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				5BDD27121E3C95FF0061AC6B /* UIColor+Creation.swift */,
+				5B7CB2F61E3EF84500CB3C03 /* String+Localization.swift */,
 				5BDD27221E3DBB320061AC6B /* UIImageView+FadingOnUpload.swift */,
 				5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */,
 			);
@@ -571,10 +597,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B45189E1E3840DA0073CE61 /* LaunchScreen.storyboard in Resources */,
+				5B0154421E3EFC6D003C9058 /* Localizable.strings in Resources */,
 				5BDD26FE1E3C41040061AC6B /* SurveyCell.xib in Resources */,
-				5B45189B1E3840DA0073CE61 /* Assets.xcassets in Resources */,
-				5B4518991E3840DA0073CE61 /* Main.storyboard in Resources */,
+				5B01544A1E3EFCF5003C9058 /* Main.storyboard in Resources */,
+				5B0154411E3EFC6D003C9058 /* Info.plist in Resources */,
+				5B0154491E3EFCF5003C9058 /* LaunchScreen.storyboard in Resources */,
+				5B0154441E3EFC9E003C9058 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +680,7 @@
 				5BDD26F51E3C3B030061AC6B /* StaticObjectsSection.swift in Sources */,
 				5B2864911E3C37C5000F6232 /* OrderedListDataAdapter.swift in Sources */,
 				5B2864811E3C2E66000F6232 /* TokenDeserializer.swift in Sources */,
+				5B7CB2F71E3EF84500CB3C03 /* String+Localization.swift in Sources */,
 				5B5A6BA61E3870690052F253 /* UISwitch+Signal.swift in Sources */,
 				5B5A6B9F1E3870690052F253 /* ControlProxy.m in Sources */,
 				5B5A6B9D1E3870690052F253 /* Signal.swift in Sources */,
@@ -659,6 +688,7 @@
 				5B28647E1E3C2E66000F6232 /* CollectionDeserializer.swift in Sources */,
 				5BDD27171E3C97190061AC6B /* Fonts.swift in Sources */,
 				5BDD27101E3C95390061AC6B /* Colors.swift in Sources */,
+				5B01544C1E3EFE91003C9058 /* Storyboard.swift in Sources */,
 				5B2864801E3C2E66000F6232 /* SurveyDeserializer.swift in Sources */,
 				5B5A6B981E3870690052F253 /* Signal+Conversion.swift in Sources */,
 				5B5A6BA51E3870690052F253 /* UIStepper+Signal.swift in Sources */,
@@ -676,9 +706,9 @@
 				5BDD26F71E3C3B520061AC6B /* Set+ObjectEqualTo.swift in Sources */,
 				5B5A6BA71E3870690052F253 /* UITextField+Signal.swift in Sources */,
 				5B28646E1E3B0129000F6232 /* Survey.swift in Sources */,
-				5B4518941E3840DA0073CE61 /* AppDelegate.swift in Sources */,
 				5B5A6B951E3870690052F253 /* Signal+Binding.swift in Sources */,
 				5B5A6B8E1E3870690052F253 /* AutodisposePool.swift in Sources */,
+				5B0154461E3EFCBB003C9058 /* AppDelegate.swift in Sources */,
 				5B5A6BA21E3870690052F253 /* UIDatePicker+Signal.swift in Sources */,
 				5B5A6B6D1E386F520052F253 /* NetworkClient.swift in Sources */,
 				5BDD27131E3C95FF0061AC6B /* UIColor+Creation.swift in Sources */,
@@ -722,25 +752,6 @@
 			targetProxy = 5B4518A51E3840DB0073CE61 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5B4518971E3840DA0073CE61 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B4518981E3840DA0073CE61 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5B45189C1E3840DA0073CE61 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B45189D1E3840DA0073CE61 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5B4518AB1E3840DB0073CE61 /* Debug */ = {
@@ -840,7 +851,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DV25EDJF6Q;
-				INFOPLIST_FILE = SurveyApp/Info.plist;
+				INFOPLIST_FILE = "SurveyApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -855,7 +866,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DV25EDJF6Q;
-				INFOPLIST_FILE = SurveyApp/Info.plist;
+				INFOPLIST_FILE = "SurveyApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
