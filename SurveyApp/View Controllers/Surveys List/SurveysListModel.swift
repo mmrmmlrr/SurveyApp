@@ -10,7 +10,7 @@ import Foundation
 
 class SurveysListModel {
   
-  let indexPathOfHighlightedItem = Observable(IndexPath(row: 0, section: 0))
+  let indexPathOfHighlightedItem = Observable(IndexPath.zero)
   let isFetchingSurveys = Observable(false)
   let didReceiveError = Pipe<Error>()
   
@@ -34,7 +34,7 @@ class SurveysListModel {
       switch response {
       case .success(let surveys):
         self?.surveysList.replaceWith(surveys)
-        self?.indexPathOfHighlightedItem.value = IndexPath(row: 0, section: 0)
+        self?.indexPathOfHighlightedItem.value = IndexPath.zero
       case .failure(let error):
         self?.didReceiveError.sendNext(error)
       }
