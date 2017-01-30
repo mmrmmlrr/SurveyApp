@@ -45,10 +45,8 @@ class SurveysListModel {
     indexPathOfHighlightedItem.value = indexPath
   }
   
-  func createDetailsModelForHighlightedItem() -> SurveyDetailsModel {
-    let survey = surveysDataAdapter.objectAtIndexPath(indexPathOfHighlightedItem.value)!
-    
-    return SurveyDetailsModel(survey)
+  func highlightedSurvey() -> Survey {
+    return surveysDataAdapter.objectAtIndexPath(indexPathOfHighlightedItem.value)!
   }
   
 }
