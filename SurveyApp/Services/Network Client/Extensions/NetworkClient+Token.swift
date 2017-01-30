@@ -21,6 +21,7 @@ extension NetworkClient {
       method: .post,
       parameters: params,
       signed: false,
+      encoding: JSONEncoding.default,
       serializer: TokenDeserializer()
     )
   }

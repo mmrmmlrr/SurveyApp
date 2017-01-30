@@ -28,9 +28,7 @@ class SurveysListViewController: UIViewController {
     setupTableView()
     subscribeForUpdatesInModel()
     
-//    NetworkClient.shared.refreshToken().subscribeNext {
-//      print($0)
-//    }.ownedBy(self)
+    NetworkClient.shared.killToken()
     model.fetchSurveys()
   }
   
@@ -80,8 +78,9 @@ class SurveysListViewController: UIViewController {
       _self.pageControl.numberOfPages = _self.model.surveysDataAdapter.numberOfObjectsInSection(0)
     }.ownedBy(self)
     
-    model.isFetchingSurveys.subscribeNext { isFetching in
+    model.isFetchingSurveys.subscribeNext { [weak self] isFetching in
       isFetching ? SVProgressHUD.show() : SVProgressHUD.dismiss()
+      self?.takeSurveyButton.isHidden = isFetching
     }.ownedBy(self)
     
     model.surveysDataAdapter.reloadDataSignal.subscribeNext { [weak self] in
