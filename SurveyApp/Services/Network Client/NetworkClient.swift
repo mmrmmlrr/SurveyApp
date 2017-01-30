@@ -30,7 +30,9 @@ class NetworkClient {
                       method: HTTPMethod,
                       parameters: [String: AnyObject] = [:],
                       signed: Bool = true,
-                      serializer: DeserializerType) -> Pipe<NetworkResponse<ResponseObjectType>> {
+                      encoding: ParameterEncoding = URLEncoding.default,
+                      serializer: DeserializerType,
+                      canRetry: Bool = true) -> Pipe<NetworkResponse<ResponseObjectType>> {
     
     let signal = Pipe<NetworkResponse<ResponseObjectType>>()
     
@@ -39,12 +41,11 @@ class NetworkClient {
       resultingParams["access_token"] = credentialsProvider.accessToken as AnyObject?
     }
 
-    print(credentialsProvider.accessToken)
-    print(credentialsProvider.basePath + path)
     let req = Alamofire.request(
       credentialsProvider.basePath + path,
       method: method,
       parameters: resultingParams,
+      encoding: encoding,
       headers: headers).validate(contentType: ["application/json"]).responseJSON { [weak self] response in
         switch response.result {
         case .success(let value):
@@ -58,24 +59,34 @@ class NetworkClient {
             signal.sendNext(.success(objects))
           }
         case .failure(let error):
-          signal.sendNext(.failure(error))
-        }
-        if let value = response.value as? [String: Any],
-          let status = value["status"] as? Int, status == 401 {
+          guard canRetry else {
+            signal.sendNext(.failure(error))
+            
+            return
+          }
           self?.refreshToken().subscribeNext { tokenResponse in
             if case .success(let token) = tokenResponse {
               self?.credentialsProvider.assignNewToken(token)
-              self?.executeRequest(path: path, method: method, parameters: parameters, signed: true, serializer: serializer).subscribeNext {
-                signal.sendNext($0)
-              }.autodispose()
-            }
-          }.autodispose()
+              self?.executeRequest(
+                path: path,
+                method: method,
+                parameters: parameters,
+                signed: signed,
+                serializer: serializer,
+                canRetry: false).subscribeNext {
+                  signal.sendNext($0)
+                }.autodispose()
+              }
+            }.autodispose()
         }
     }
-    
     signal.destructor = { req.cancel() }
     
     return signal
+  }
+  
+  func killToken() {
+    credentialsProvider.assignNewToken("")
   }
   
 }

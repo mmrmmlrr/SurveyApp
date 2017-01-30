@@ -34,6 +34,7 @@ class SurveysListModel {
       switch response {
       case .success(let surveys):
         self?.surveysList.replaceWith(surveys)
+        self?.indexPathOfHighlightedItem.value = IndexPath(row: 0, section: 0)
       case .failure(let error):
         self?.didReceiveError.sendNext(error)
       }

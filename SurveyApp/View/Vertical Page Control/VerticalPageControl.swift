@@ -14,6 +14,8 @@ class VerticalPageControl: UIControl {
     didSet { layoutContent() }
   }
   
+  var maxNumberOfPages = 30
+  
   var currentPage: Int = 0 {
     didSet { self.selectPage(at: currentPage) }
   }
@@ -47,6 +49,8 @@ class VerticalPageControl: UIControl {
   private func layoutContent() {
     buttons.forEach { $0.removeFromSuperview() }
     buttons = []
+    
+    let numberOfPages = min(maxNumberOfPages, self.numberOfPages)
     
     var nextButtonY: CGFloat = 0.0
     for n in 0..<numberOfPages {

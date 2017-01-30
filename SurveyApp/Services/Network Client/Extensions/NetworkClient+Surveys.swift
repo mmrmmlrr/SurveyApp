@@ -20,6 +20,7 @@ extension NetworkClient {
       path: "surveys.json",
       method: .get,
       parameters: params,
+      encoding: URLEncoding.default,
       serializer: SurveyDeserializer().collection()
     )
     
