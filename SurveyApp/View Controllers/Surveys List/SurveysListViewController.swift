@@ -28,7 +28,6 @@ class SurveysListViewController: UIViewController, ContainedInSurveyNavigationCo
     setupTableView()
     subscribeForUpdatesInModel()
     
-    NetworkClient.shared.killToken()
     model.fetchSurveys()
   }
   

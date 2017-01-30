@@ -85,8 +85,4 @@ class NetworkClient {
     return signal
   }
   
-  func killToken() {
-    credentialsProvider.assignNewToken("")
-  }
-  
 }
