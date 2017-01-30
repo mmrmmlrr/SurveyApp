@@ -319,15 +319,15 @@
 			children = (
 				5B0154451E3EFCBB003C9058 /* AppDelegate.swift */,
 				5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */,
+				5BDD270E1E3C952D0061AC6B /* Appearance */,
+				5B28646C1E3B0120000F6232 /* Entities */,
+				5BDD27111E3C95FF0061AC6B /* Extensions */,
+				5B5A6B6A1E386F4A0052F253 /* Services */,
 				5B01543C1E3EFC6D003C9058 /* Supporting Files */,
 				5B01543B1E3EFC33003C9058 /* Storyboards */,
-				5BDD27111E3C95FF0061AC6B /* Extensions */,
-				5BDD270E1E3C952D0061AC6B /* Appearance */,
+				5B5A6B6E1E3870690052F253 /* Vendors */,
 				5BDD27071E3C932F0061AC6B /* View */,
 				5B2864831E3C32FD000F6232 /* View Controllers */,
-				5B28646C1E3B0120000F6232 /* Entities */,
-				5B5A6B6E1E3870690052F253 /* Vendors */,
-				5B5A6B6A1E386F4A0052F253 /* Services */,
 			);
 			path = SurveyApp;
 			sourceTree = "<group>";
