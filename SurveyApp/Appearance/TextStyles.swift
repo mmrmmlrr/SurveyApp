@@ -10,12 +10,24 @@ import HandyText
 
 extension TextStyle {
   
+  private static var basicWhiteText: TextStyle {
+    return TextStyle(font: .avenir).withForegroundColor(.white).withSize(18.0).regular()
+  }
+  
   static var navigationHeader: TextStyle {
-    return TextStyle(font: .avenir).withSize(20.0).heavy().withForegroundColor(.white)
+    return TextStyle.based(on: basicWhiteText).heavy().withSize(20.0)
+  }
+  
+  static var largeHeader: TextStyle {
+    return TextStyle.based(on: basicWhiteText).heavy().withSize(30.0)
+  }
+  
+  static var smallCaption: TextStyle {
+    return TextStyle.based(on: basicWhiteText)
   }
   
   static var bigButton: TextStyle {
-    return TextStyle(font: .avenir).withSize(18.0).regular().withForegroundColor(.white)
+    return TextStyle.based(on: basicWhiteText)
   }
   
 }
