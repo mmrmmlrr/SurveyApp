@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B0154411E3EFC6D003C9058 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B01543E1E3EFC6D003C9058 /* Info.plist */; };
 		5B0154421E3EFC6D003C9058 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B01543F1E3EFC6D003C9058 /* Localizable.strings */; };
 		5B0154441E3EFC9E003C9058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0154431E3EFC9E003C9058 /* Assets.xcassets */; };
 		5B0154461E3EFCBB003C9058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0154451E3EFCBB003C9058 /* AppDelegate.swift */; };
 		5B0154491E3EFCF5003C9058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0154471E3EFCF5003C9058 /* LaunchScreen.storyboard */; };
 		5B01544A1E3EFCF5003C9058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B0154481E3EFCF5003C9058 /* Main.storyboard */; };
 		5B01544C1E3EFE91003C9058 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01544B1E3EFE91003C9058 /* Storyboard.swift */; };
+		5B0154501E3F88CE003C9058 /* IndexPath+Zero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01544F1E3F88CE003C9058 /* IndexPath+Zero.swift */; };
 		5B2864651E39D395000F6232 /* NetworkClient+Surveys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */; };
 		5B28646E1E3B0129000F6232 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28646D1E3B0129000F6232 /* Survey.swift */; };
 		5B28647E1E3C2E66000F6232 /* CollectionDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */; };
@@ -27,7 +27,6 @@
 		5B28648F1E3C37C5000F6232 /* ObjectsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28648B1E3C37C5000F6232 /* ObjectsDataSource.swift */; };
 		5B2864901E3C37C5000F6232 /* OrderedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28648C1E3C37C5000F6232 /* OrderedList.swift */; };
 		5B2864911E3C37C5000F6232 /* OrderedListDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B28648D1E3C37C5000F6232 /* OrderedListDataAdapter.swift */; };
-		5B4518A91E3840DB0073CE61 /* SurveyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */; };
 		5B5A6B6D1E386F520052F253 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B6C1E386F520052F253 /* NetworkClient.swift */; };
 		5B5A6B8E1E3870690052F253 /* AutodisposePool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B701E3870690052F253 /* AutodisposePool.swift */; };
 		5B5A6B8F1E3870690052F253 /* DeinitObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5A6B711E3870690052F253 /* DeinitObservable.swift */; };
@@ -81,16 +80,6 @@
 		A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A22552BF33786547C92A79 /* Pods_SurveyApp.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5B4518A51E3840DB0073CE61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B4518881E3840DA0073CE61 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B45188F1E3840DA0073CE61;
-			remoteInfo = SurveyApp;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		0B657C3EFDE80C421F122350 /* Pods-SurveyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveyApp/Pods-SurveyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5B01543E1E3EFC6D003C9058 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,6 +89,7 @@
 		5B0154471E3EFCF5003C9058 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B0154481E3EFCF5003C9058 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5B01544B1E3EFE91003C9058 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		5B01544F1E3F88CE003C9058 /* IndexPath+Zero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexPath+Zero.swift"; sourceTree = "<group>"; };
 		5B2864641E39D395000F6232 /* NetworkClient+Surveys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NetworkClient+Surveys.swift"; sourceTree = "<group>"; };
 		5B28646D1E3B0129000F6232 /* Survey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		5B2864781E3C2E66000F6232 /* CollectionDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDeserializer.swift; sourceTree = "<group>"; };
@@ -114,9 +104,6 @@
 		5B28648C1E3C37C5000F6232 /* OrderedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedList.swift; sourceTree = "<group>"; };
 		5B28648D1E3C37C5000F6232 /* OrderedListDataAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedListDataAdapter.swift; sourceTree = "<group>"; };
 		5B4518901E3840DA0073CE61 /* SurveyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SurveyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAppTests.swift; sourceTree = "<group>"; };
-		5B4518AA1E3840DB0073CE61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B5A6B6C1E386F520052F253 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		5B5A6B701E3870690052F253 /* AutodisposePool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutodisposePool.swift; sourceTree = "<group>"; };
 		5B5A6B711E3870690052F253 /* DeinitObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeinitObservable.swift; sourceTree = "<group>"; };
@@ -179,13 +166,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4DE950E76FE910B2A7BFEEF /* Pods_SurveyApp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B4518A11E3840DB0073CE61 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				5B4518921E3840DA0073CE61 /* SurveyApp */,
-				5B4518A71E3840DB0073CE61 /* SurveyAppTests */,
 				5B4518911E3840DA0073CE61 /* Products */,
 				0EBB2F355D3112815042B3AC /* Pods */,
 				53BB3E30386D1259D2E9153A /* Frameworks */,
@@ -308,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				5B4518901E3840DA0073CE61 /* SurveyApp.app */,
-				5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,26 +296,17 @@
 			children = (
 				5B0154451E3EFCBB003C9058 /* AppDelegate.swift */,
 				5BBAB4081E387DD200B9D31B /* SurveyAppBridgingHeader.h */,
+				5BDD270E1E3C952D0061AC6B /* Appearance */,
+				5B28646C1E3B0120000F6232 /* Entities */,
+				5BDD27111E3C95FF0061AC6B /* Extensions */,
+				5B5A6B6A1E386F4A0052F253 /* Services */,
 				5B01543C1E3EFC6D003C9058 /* Supporting Files */,
 				5B01543B1E3EFC33003C9058 /* Storyboards */,
-				5BDD27111E3C95FF0061AC6B /* Extensions */,
-				5BDD270E1E3C952D0061AC6B /* Appearance */,
+				5B5A6B6E1E3870690052F253 /* Vendors */,
 				5BDD27071E3C932F0061AC6B /* View */,
 				5B2864831E3C32FD000F6232 /* View Controllers */,
-				5B28646C1E3B0120000F6232 /* Entities */,
-				5B5A6B6E1E3870690052F253 /* Vendors */,
-				5B5A6B6A1E386F4A0052F253 /* Services */,
 			);
 			path = SurveyApp;
-			sourceTree = "<group>";
-		};
-		5B4518A71E3840DB0073CE61 /* SurveyAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				5B4518A81E3840DB0073CE61 /* SurveyAppTests.swift */,
-				5B4518AA1E3840DB0073CE61 /* Info.plist */,
-			);
-			path = SurveyAppTests;
 			sourceTree = "<group>";
 		};
 		5B5A6B6A1E386F4A0052F253 /* Services */ = {
@@ -495,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				5BDD27121E3C95FF0061AC6B /* UIColor+Creation.swift */,
+				5B01544F1E3F88CE003C9058 /* IndexPath+Zero.swift */,
 				5B7CB2F61E3EF84500CB3C03 /* String+Localization.swift */,
 				5BDD27221E3DBB320061AC6B /* UIImageView+FadingOnUpload.swift */,
 				5BDD27181E3C9D990061AC6B /* UIViewController+BackButton.swift */,
@@ -533,24 +503,6 @@
 			productReference = 5B4518901E3840DA0073CE61 /* SurveyApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5B4518A31E3840DB0073CE61 /* SurveyAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5B4518B01E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */;
-			buildPhases = (
-				5B4518A01E3840DB0073CE61 /* Sources */,
-				5B4518A11E3840DB0073CE61 /* Frameworks */,
-				5B4518A21E3840DB0073CE61 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B4518A61E3840DB0073CE61 /* PBXTargetDependency */,
-			);
-			name = SurveyAppTests;
-			productName = SurveyAppTests;
-			productReference = 5B4518A41E3840DB0073CE61 /* SurveyAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -565,11 +517,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DV25EDJF6Q;
 						ProvisioningStyle = Automatic;
-					};
-					5B4518A31E3840DB0073CE61 = {
-						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5B45188F1E3840DA0073CE61;
 					};
 				};
 			};
@@ -587,7 +534,6 @@
 			projectRoot = "";
 			targets = (
 				5B45188F1E3840DA0073CE61 /* SurveyApp */,
-				5B4518A31E3840DB0073CE61 /* SurveyAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -600,16 +546,8 @@
 				5B0154421E3EFC6D003C9058 /* Localizable.strings in Resources */,
 				5BDD26FE1E3C41040061AC6B /* SurveyCell.xib in Resources */,
 				5B01544A1E3EFCF5003C9058 /* Main.storyboard in Resources */,
-				5B0154411E3EFC6D003C9058 /* Info.plist in Resources */,
 				5B0154491E3EFCF5003C9058 /* LaunchScreen.storyboard in Resources */,
 				5B0154441E3EFC9E003C9058 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B4518A21E3840DB0073CE61 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,6 +616,7 @@
 				5B5A6BA41E3870690052F253 /* UISlider+Signal.swift in Sources */,
 				5B2864861E3C3315000F6232 /* SurveysListViewController.swift in Sources */,
 				5BDD26F51E3C3B030061AC6B /* StaticObjectsSection.swift in Sources */,
+				5B0154501E3F88CE003C9058 /* IndexPath+Zero.swift in Sources */,
 				5B2864911E3C37C5000F6232 /* OrderedListDataAdapter.swift in Sources */,
 				5B2864811E3C2E66000F6232 /* TokenDeserializer.swift in Sources */,
 				5B7CB2F71E3EF84500CB3C03 /* String+Localization.swift in Sources */,
@@ -735,23 +674,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5B4518A01E3840DB0073CE61 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5B4518A91E3840DB0073CE61 /* SurveyAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5B4518A61E3840DB0073CE61 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B45188F1E3840DA0073CE61 /* SurveyApp */;
-			targetProxy = 5B4518A51E3840DB0073CE61 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5B4518AB1E3840DB0073CE61 /* Debug */ = {
@@ -875,34 +798,6 @@
 			};
 			name = Release;
 		};
-		5B4518B11E3840DB0073CE61 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SurveyAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
-			};
-			name = Debug;
-		};
-		5B4518B21E3840DB0073CE61 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SurveyAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.achernish.home.SurveyAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SurveyApp.app/SurveyApp";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -920,15 +815,6 @@
 			buildConfigurations = (
 				5B4518AE1E3840DB0073CE61 /* Debug */,
 				5B4518AF1E3840DB0073CE61 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5B4518B01E3840DB0073CE61 /* Build configuration list for PBXNativeTarget "SurveyAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B4518B11E3840DB0073CE61 /* Debug */,
-				5B4518B21E3840DB0073CE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
