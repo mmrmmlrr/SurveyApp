@@ -39,14 +39,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-WU-Yz4">
                                 <rect key="frame" x="0.0" y="0.0" width="264" height="154"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3X-VU-xjA">
-                                        <rect key="frame" x="20" y="56" width="224" height="42.5"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3X-VU-xjA">
+                                        <rect key="frame" x="30" y="56" width="204" height="41"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83R-ly-oht">
-                                        <rect key="frame" x="20" y="108.5" width="224" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83R-ly-oht">
+                                        <rect key="frame" x="30" y="107" width="204" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,12 +54,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="p3X-VU-xjA" secondAttribute="trailing" constant="20" id="3u9-ik-57E"/>
-                                    <constraint firstItem="p3X-VU-xjA" firstAttribute="leading" secondItem="bWb-WU-Yz4" secondAttribute="leading" constant="20" id="6TU-Ci-p6P"/>
+                                    <constraint firstAttribute="trailing" secondItem="p3X-VU-xjA" secondAttribute="trailing" constant="30" id="3u9-ik-57E"/>
+                                    <constraint firstItem="p3X-VU-xjA" firstAttribute="leading" secondItem="bWb-WU-Yz4" secondAttribute="leading" constant="30" id="6TU-Ci-p6P"/>
                                     <constraint firstItem="83R-ly-oht" firstAttribute="top" secondItem="p3X-VU-xjA" secondAttribute="bottom" constant="10" id="Ejn-Pz-MdL"/>
-                                    <constraint firstAttribute="trailing" secondItem="83R-ly-oht" secondAttribute="trailing" constant="20" id="HAQ-Im-LqX"/>
-                                    <constraint firstItem="p3X-VU-xjA" firstAttribute="centerY" secondItem="bWb-WU-Yz4" secondAttribute="centerY" id="Ifb-xY-lZm"/>
-                                    <constraint firstItem="83R-ly-oht" firstAttribute="leading" secondItem="bWb-WU-Yz4" secondAttribute="leading" constant="20" id="MYb-kE-UQe"/>
+                                    <constraint firstAttribute="trailing" secondItem="83R-ly-oht" secondAttribute="trailing" constant="30" id="HAQ-Im-LqX"/>
+                                    <constraint firstItem="83R-ly-oht" firstAttribute="leading" secondItem="bWb-WU-Yz4" secondAttribute="leading" constant="30" id="MYb-kE-UQe"/>
+                                    <constraint firstItem="p3X-VU-xjA" firstAttribute="top" secondItem="bWb-WU-Yz4" secondAttribute="top" constant="56" id="egK-Hc-SCU"/>
                                 </constraints>
                             </view>
                         </subviews>

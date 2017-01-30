@@ -31,18 +31,20 @@ class NetworkClient {
                       parameters: [String: AnyObject] = [:],
                       signed: Bool = true,
                       serializer: DeserializerType) -> Pipe<NetworkResponse<ResponseObjectType>> {
+    
     let signal = Pipe<NetworkResponse<ResponseObjectType>>()
     
     var resultingParams = parameters
     if signed {
       resultingParams["access_token"] = credentialsProvider.accessToken as AnyObject?
     }
-    
+
+    print(credentialsProvider.accessToken)
+    print(credentialsProvider.basePath + path)
     let req = Alamofire.request(
       credentialsProvider.basePath + path,
       method: method,
       parameters: resultingParams,
-      encoding: JSONEncoding.prettyPrinted,
       headers: headers).validate(contentType: ["application/json"]).responseJSON { [weak self] response in
         switch response.result {
         case .success(let value):
@@ -59,7 +61,7 @@ class NetworkClient {
           signal.sendNext(.failure(error))
         }
         if let value = response.value as? [String: Any],
-          let status = value["status"] as? Int, status == 500 {
+          let status = value["status"] as? Int, status == 401 {
           self?.refreshToken().subscribeNext { tokenResponse in
             if case .success(let token) = tokenResponse {
               self?.credentialsProvider.assignNewToken(token)

@@ -16,19 +16,19 @@ extension NetworkClient {
     params["page"] = page as AnyObject
     params["per_page"] = perPage as AnyObject
     
-//    return NetworkClient.shared.executeRequest(
-//      path: "surveys.json",
-//      method: .get,
-//      parameters: params,
-//      serializer: SurveyDeserializer().collection()
-//    )
+    return NetworkClient.shared.executeRequest(
+      path: "surveys.json",
+      method: .get,
+      parameters: params,
+      serializer: SurveyDeserializer().collection()
+    )
     
-    let pipe = Pipe<NetworkResponse<[Survey]>>()
-    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-      pipe.sendNext(.success(self.fakeSurveys()))
-    }
+//    let pipe = Pipe<NetworkResponse<[Survey]>>()
+//    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//      pipe.sendNext(.success(self.fakeSurveys()))
+//    }
     
-    return pipe
+//    return pipe
   }
   
   //TODO: TEMP

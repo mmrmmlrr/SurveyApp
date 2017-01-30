@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import HandyText
 
 class SurveyCell: UICollectionViewCell, ObjectConsuming {
   
@@ -17,8 +18,11 @@ class SurveyCell: UICollectionViewCell, ObjectConsuming {
   @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
   
   func applyObject(_ object: Survey) {
-    titleLabel.text = object.hotelName
-    descriptionLabel.text = object.description
+    let headerStyle = TextStyle.based(on: .largeHeader).withLineBreakMode(.byWordWrapping).withAlignment(.center)
+    let captionStyle = TextStyle.based(on: .smallCaption).withLineBreakMode(.byWordWrapping).withAlignment(.center)
+    titleLabel.attributedText = object.hotelName.withStyle(headerStyle)
+    descriptionLabel.attributedText = object.description.withStyle(captionStyle)
+    
     activityIndicator.alpha = 1.0
     activityIndicator.startAnimating()
     imageView.setImageFaded(with: URL(string: object.imageURLString)) {

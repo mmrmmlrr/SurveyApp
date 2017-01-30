@@ -28,6 +28,9 @@ class SurveysListViewController: UIViewController {
     setupTableView()
     subscribeForUpdatesInModel()
     
+//    NetworkClient.shared.refreshToken().subscribeNext {
+//      print($0)
+//    }.ownedBy(self)
     model.fetchSurveys()
   }
   
