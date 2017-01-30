@@ -24,7 +24,6 @@ class SurveysListViewController: UIViewController {
     title = "surveys_list.navigation.title".localized
     takeSurveyButton.setAttributedTitle("surveys_list.take_survey_button.title".localized.withStyle(.bigButton),
                                         for: .normal)
-    
     addRefreshButton()
     setupTableView()
     subscribeForUpdatesInModel()
@@ -64,8 +63,7 @@ class SurveysListViewController: UIViewController {
       let pageHeight = _self.collectionView.frame.size.height
       let currentPage = Int(_self.collectionView.contentOffset.y / pageHeight)
       
-      self?.model.highlightItem(at: IndexPath(row: currentPage, section: 0))
-      
+      _self.model.highlightItem(at: IndexPath(row: currentPage, section: 0))
     }.ownedBy(self)
   }
   
@@ -121,4 +119,5 @@ class SurveysListViewController: UIViewController {
     alertController.addAction(UIAlertAction(title: "alert.action.accept".localized, style: .default))
     present(alertController, animated: true)
   }
+  
 }
