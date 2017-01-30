@@ -21,7 +21,9 @@ class SurveysListViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "SURVEYS" //TODO: Localize
+    title = "surveys_list.navigation.title".localized
+    takeSurveyButton.setAttributedTitle("surveys_list.take_survey_button.title".localized.withStyle(.bigButton),
+                                        for: .normal)
     
     addRefreshButton()
     setupTableView()
@@ -29,6 +31,8 @@ class SurveysListViewController: UIViewController {
     
     model.fetchSurveys()
   }
+  
+  // MARK: Decoration
   
   private func addRefreshButton() {
     let button = UIButton(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
@@ -63,7 +67,6 @@ class SurveysListViewController: UIViewController {
       self?.model.highlightItem(at: IndexPath(row: currentPage, section: 0))
       
     }.ownedBy(self)
-    
   }
   
   private func subscribeForUpdatesInModel() {
@@ -84,19 +87,38 @@ class SurveysListViewController: UIViewController {
       self?.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
       self?.pageControl.currentPage = 0
     }.ownedBy(self)
+    
+    model.didReceiveError.subscribeNext { [weak self] in
+      self?.showAlert(for: $0)
+    }.ownedBy(self)
   }
+  
+  // MARK: Actions
   
   @IBAction
   private func takeSurvey(sender: AnyObject?) {
     let detailsModel = model.createDetailsModelForHighlightedItem()
-    let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: SurveyDetailsViewController.self)) as! SurveyDetailsViewController //TODO: make generic
+    let controller: SurveyDetailsViewController = Storyboard.main.correspondingController()
     controller.model = detailsModel
     navigationController?.pushViewController(controller, animated: true)
   }
   
   @IBAction
   private func selectPage(sender: VerticalPageControl) {
-    collectionView.scrollToItem(at: IndexPath(item: sender.currentPage, section: 0), at: .centeredVertically, animated: true)
+    collectionView.scrollToItem(at: IndexPath(item: sender.currentPage, section: 0),
+                                at: .centeredVertically,
+                                animated: true)
   }
-  
+    
+  // MARK: Alerts
+
+  func showAlert(for error: Error) {
+    let alertController = UIAlertController(
+      title: "alert.error.title".localized,
+      message: error.localizedDescription,
+      preferredStyle: .alert
+    )
+    alertController.addAction(UIAlertAction(title: "alert.action.accept".localized, style: .default))
+    present(alertController, animated: true)
+  }
 }

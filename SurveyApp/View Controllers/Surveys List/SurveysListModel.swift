@@ -12,17 +12,19 @@ class SurveysListModel {
   
   let indexPathOfHighlightedItem = Observable(IndexPath(row: 0, section: 0))
   let isFetchingSurveys = Observable(false)
+  let didReceiveError = Pipe<Error>()
   
   private(set) lazy var surveysDataAdapter: OrderedListDataAdapter<Survey> = {
-    let adapter = OrderedListDataAdapter(list: self.surveysList)
-    
-    return adapter
+    return OrderedListDataAdapter(list: self.surveysList)
   }()
   
   private let surveysList = OrderedList<Survey>()
   private let pool = AutodisposePool()
-  
   private var subscriptionForSurveysRequest: Disposable?
+  
+  deinit {
+    subscriptionForSurveysRequest?.dispose()
+  }
   
   func fetchSurveys() {
     isFetchingSurveys.sendNext(true)
@@ -32,8 +34,8 @@ class SurveysListModel {
       switch response {
       case .success(let surveys):
         self?.surveysList.replaceWith(surveys)
-      case .failure(_):
-        break //TODO: show error
+      case .failure(let error):
+        self?.didReceiveError.sendNext(error)
       }
     }.putInto(pool)
   }
